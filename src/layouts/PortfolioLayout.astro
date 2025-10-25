@@ -1,0 +1,46 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import PortfolioHero from "./portfolio/Hero.astro";
+import PortfolioProjects from "./portfolio/Projects.astro";
+const {
+    pageLanguage,
+    pageTitle,
+    pageDescription,
+    pageKeywords,
+    fullname,
+    username,
+    footerQuote,
+    navigation,
+    socials,
+    roleTitle,
+    roleDescription,
+    roleHighlights,
+    backgroundImage,
+    projects,
+} = Astro.props;
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    pageLanguage={pageLanguage}
+    pageTitle={pageTitle}
+    pageDescription={pageDescription}
+    pageKeywords={pageKeywords}
+    fullname={fullname}
+    footerQuote={footerQuote}
+    navigation={navigation}
+    socials={socials}
+>
+    <main>
+        <PortfolioHero
+            fullname={fullname}
+            username={username}
+            roleTitle={roleTitle}
+            username={username}
+            roleDescription={roleDescription}
+            roleHighlights={roleHighlights}
+            backgroundImage={backgroundImage}
+        />
+        <PortfolioProjects sectionTitle="Projects" projects={projects} />
+    </main>
+</BaseLayout>

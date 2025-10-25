@@ -1,0 +1,38 @@
+---
+import ComingSoon from "../layouts/ComingSoon.astro";
+import data from "@data/data.json";
+
+const pageLanguage = "en";
+
+const pageData = data[pageLanguage];
+
+const pageDescription = pageData.pageDescription;
+const pageKeywords = pageData.pageKeywords;
+const fullname = pageData.fullname;
+const footerQuote = pageData.signature;
+const navigation = pageData.navigation;
+const socials = pageData.socials;
+const pageTitle = pageData.fullname + "| Comming Soon";
+const pageRedirect = pageData.navigation[0].link;
+const comingSoonTitle = "Under Construction";
+const comingSoonDescription =
+    "We’re working hard to bring this section to life. Check back soon.";
+const buttonText = "Return Home";
+const imageAlt = "Construction animation";
+---
+
+<ComingSoon
+    pageLanguage={pageLanguage}
+    pageDescription={pageDescription}
+    pageKeywords={pageKeywords}
+    fullname={fullname}
+    footerQuote={footerQuote}
+    navigation={navigation}
+    socials={socials}
+    pageTitle={pageTitle}
+    pageRedirect={pageRedirect}
+    comingSoonTitle={comingSoonTitle}
+    comingSoonDescription={comingSoonDescription}
+    buttonText={buttonText}
+    imageAlt={imageAlt}
+/>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../layouts/HeroSection.astro";
+import AboutSection from "../layouts/AboutSection.astro";
+import ProjectSection from "../layouts/portfolio/Projects.astro";
+import BlogSection from "../layouts/BlogSection.astro";
+import ContactSection from "src/layouts/ContactSection.astro";
+
+import data from "@data/data.json";
+
+const pageLanguage = "en";
+
+const pageData = data[pageLanguage];
+const pageTitle = pageData.fullname + " | Home";
+const pageDescription = pageData.pageDescription;
+const pageKeywords = pageData.pageKeywords;
+const fullname = pageData.fullname;
+const username = pageData.username;
+const biography = pageData.biography;
+const aboutMe = pageData.aboutMe;
+const roles = pageData.roles;
+const projects = pageData.projects;
+const footerQuote = pageData.signature;
+const navigation = pageData.navigation;
+const socials = pageData.socials;
+const langBlog = pageLanguage;
+---
+
+<BaseLayout
+	pageLanguage={pageLanguage}
+	pageTitle={pageTitle}
+	pageDescription={pageDescription}
+	pageKeywords={pageKeywords}
+	fullname={fullname}
+	footerQuote={footerQuote}
+	navigation={navigation}
+	socials={socials}
+>
+	<main>
+		<HeroSection
+			fullname={fullname}
+			username={username}
+			biography={biography}
+			roles={roles}
+		/>
+		<AboutSection
+			sectionTitle="About Me"
+			textButton="See more..."
+			aboutMe={aboutMe}
+			roles={roles}
+			langBlog={langBlog}
+		/>
+		<ProjectSection sectionTitle="Projects" projects={projects} />
+		<BlogSection
+			sectionTitle="Blog"
+			sectionSubtitle="From the Keyboard"
+			buttonText="Go to Blog"
+			langBlog={langBlog}
+		/>
+		<ContactSection
+			sectionTitle="Contact Me"
+			username={username}
+			socials={socials.concat(socials)}
+		/>
+	</main>
+</BaseLayout>

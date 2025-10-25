@@ -1,0 +1,129 @@
+{
+    "en": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "I design and develop solutions by uniting creativity, data, and technology. My focus is transforming challenges into high-impact strategies that maximize results.",
+        "aboutMe": "I am a multidisciplinary professional with a passion for connecting creativity, data, and technology. My approach integrates advertising strategy with data analysis, software development, and visual storytelling through photography to build comprehensive, high-impact solutions.",
+        "signature": "Creating the future, one line of code at a time.",
+        "pageDescription": "Professional portfolio of Erik Ramirez, data analyst, software developer, and advertising specialist with a passion for creative photography. I combine data, code, creativity, and photography to craft meaningful and visually impactful digital experiences.",
+        "pageKeywords": "data analysis, data visualization, software development, web development, advertising, digital marketing, photography, creative portfolio, analytics, frontend, backend, full stack, data science, visualization, branding, photo editing",
+        "navigation": [
+            {
+                "title": "Home",
+                "link": "/",
+                "icon": "home"
+            },
+            {
+                "title": "About Me",
+                "link": "/#about",
+                "icon": "about"
+            },
+            {
+                "title": "Projects",
+                "link": "/#projects",
+                "icon": "projects"
+            },
+            {
+                "title": "Blog",
+                "link": "/#blog",
+                "icon": "blog"
+            },
+            {
+                "title": "Contact",
+                "link": "/#contact",
+                "icon": "contact"
+            }
+        ],
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Advertising Specialist",
+                "description": "Expert in brand strategy and advertising creativity. I develop high-impact campaigns that transform ideas into memorable experiences, fusing design, innovation, and strategy.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Anime animation: Commercial with an anime hand holding a soft drink.",
+                "highlights": [
+                    "Brand Strategist",
+                    "High-Impact Campaigns",
+                    "Design",
+                    "Innovation",
+                    "Strategy",
+                    "Scalable Growth"
+                ],
+                "slug": "advertising-specialist",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Data Analyst",
+                "description": "Specialist in extracting, processing, and analyzing large volumes of data. I turn complex findings into clear insights, visualizations, and reports to guide strategy and optimize results.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analyst manipulating complex controls and reviewing printed data outputs.",
+                "highlights": [],
+                "slug": "data-analyst",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Software Developer",
+                "description": "I design and implement robust software solutions. I convert business requirements into efficient applications, managing the full cycle to optimize operations and maximize strategic impact.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animation of hands rapidly typing on a futuristic interface or control panel, executing complex commands on a high-tech system.",
+                "highlights": [],
+                "slug": "software-developer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Photographer",
+                "description": "I tell stories with light. I specialize in capturing genuine moments and the essence of people/brands, crafting timeless images where technique meets vision.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animation of a professional photographer manipulating a DSLR camera, capturing a dramatic landscape of the sky and mountains.",
+                "highlights": [],
+                "slug": "photographer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            }
+        ],
+        "projects": [
+            {
+                "title": "Coming Soon",
+                "description": "This project will be available soon. Stay tuned to see it shortly.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Coming Soon Project",
+                "tags": [
+                    "Coming Soon",
+                    "Portfolio",
+                    "Soon"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    }
+}

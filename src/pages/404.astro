@@ -1,0 +1,37 @@
+---
+import ErrorLayout from "../layouts/ErrorLayout.astro";
+import data from "@data/data.json";
+
+const pageLanguage = "en";
+
+const pageData = data[pageLanguage];
+
+const errorTitle = "404";
+const errorSubtitle = "Page Not Found";
+const errorDescription =
+    "It looks like you’ve lost your way in cyberspace. Let’s get you back to a safe place.";
+const textButton = "Return Home";
+
+const pageTitle = pageData.fullname + " | 404";
+const pageDescription = pageData.pageDescription;
+const pageKeywords = pageData.pageKeywords;
+const fullname = pageData.fullname;
+const footerQuote = pageData.signature;
+const navigation = pageData.navigation;
+const socials = pageData.socials;
+---
+
+<ErrorLayout
+    pageTitle={pageTitle}
+    pageDescription={pageDescription}
+    pageKeywords={pageKeywords}
+    fullname={fullname}
+    footerQuote={footerQuote}
+    navigation={navigation}
+    socials={socials}
+>
+    <h2 class="error-title">{errorTitle}</h2>
+    <p class="error-subtitle">{errorSubtitle}</p>
+    <p class="error-description">{errorDescription}</p>
+    <a href="/" class="btn">{textButton}</a>
+</ErrorLayout>

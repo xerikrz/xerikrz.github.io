@@ -1,0 +1,43 @@
+---
+import "../styles/normalize.css";
+import "../styles/global.css";
+import "../styles/animations.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import GoogleAnalytics from "../scripts/GoogleAnalytics.astro";
+
+const {
+    pageLanguage = "en",
+    pageTitle = "Your Name | Home",
+    pageDescription = "Your description here",
+    pageKeywords = "keyword1, keyword2, keyword3",
+    fullname = "Your fullname",
+    footerQuote: signature = "Your Footer Quote",
+    navigation,
+    socials,
+} = Astro.props;
+---
+
+<html lang={pageLanguage}>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+        <meta name="theme-color" content="var(--color-primary)" />
+        <meta name="author" content={fullname} />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&family=Inter:wght@400;500;700&family=Orbitron:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <Header fullname={fullname} navigation={navigation} />
+        <slot />
+        <Footer fullname={fullname} footerQuote={signature} socials={socials} />
+        <GoogleAnalytics />
+    </body>
+</html>
