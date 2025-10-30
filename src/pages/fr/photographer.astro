@@ -1,0 +1,992 @@
+---
+import { useTranslations } from "../../i18n/utils.ts";
+import { languagesList } from "../../i18n/ui.ts";
+const currentLocale = Astro.currentLocale || "en";
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+import allPhotosData from "@data/photos.json";
+import data from "@data/data.json";
+const userData = data[currentLocale];
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PhotoIcon from "../../components/icons/PhotoIcon.astro";
+
+const photos = allPhotosData.map((photo) => ({
+    ...photo,
+    tags: photo.tags || [],
+}));
+
+const shuffledPhotos = photos.sort(() => Math.random() - 0.5);
+
+const getRandomTags = (tags, count = 2) => {
+    if (!tags || tags.length === 0) return "";
+    const shuffled = [...tags].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count).join(" / ");
+};
+
+const {
+    pageTitle = userData.fullname + " | " + t("photographer.title"),
+    pageDescription = userData.homeDescription,
+    pageKeywords = userData.homeKeywords,
+    fullname = userData.fullname,
+    username = userData.username,
+    footerQuote = userData.signature,
+    socials = userData.socials,
+} = Astro.props;
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    pageDescription={pageDescription}
+    pageKeywords={pageKeywords}
+    fullname={fullname}
+    footerQuote={footerQuote}
+    socials={socials}
+>
+    <main>
+        <section class="hero">
+            <div class="hero-content" style="text-align: center;">
+                <PhotoIcon class="hero-icon" />
+                <h2 class="hero-name">{fullname}</h2>
+                <a
+                    href="https://www.instagram.com/xerikrz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hero-username">{username}</a
+                >
+                <p class="hero-quote">{t("photographer.text.quote")}</p>
+            </div>
+        </section>
+        <section id="gallery-presentation" class="gallery-presentation">
+            <div class="gallery-presentation-container">
+                <h2 class="section-title">{t("photographer.section.title")}</h2>
+                <div class="filters-wrapper">
+                    <div class="carousel-container">
+                        <button id="scroll-left" class="carousel-arrow">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="m15 18-6-6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="carousel-track-wrapper">
+                            <div id="carousel-track">
+                                <ul id="filter-list"></ul>
+                            </div>
+                        </div>
+                        <button id="scroll-right" class="carousel-arrow">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <button id="chip-todos" data-tag="all" class="btn"
+                        >{t("photographer.text.button")}</button
+                    >
+                </div>
+            </div>
+        </section>
+        <section class="gallery-section">
+            <div class="gallery-grid">
+                {
+                    shuffledPhotos.map((photo) => (
+                        <div class="gallery-item-wrapper">
+                            <img
+                                src={photo.small}
+                                alt={photo.alt}
+                                class="gallery-item"
+                                loading="lazy"
+                            />
+                            <div class="gallery-item-overlay">
+                                <p class="overlay-text">
+                                    {getRandomTags(photo.tags)}
+                                </p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <button id="lightbox-close" class="lightbox-close">&times;</button>
+        <button id="lightbox-prev" class="lightbox-nav prev">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Imagen ampliada" />
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+        <button id="lightbox-next" class="lightbox-nav next">&#10095;</button>
+    </div>
+</BaseLayout>
+
+<style is:global>
+    .hero {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100dvh;
+        padding: 2rem;
+        color: var(--color-white);
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent),
+            var(
+                --hero-bg-image,
+                url("https://res.cloudinary.com/dhcjs6gks/image/upload/w_50,q_auto,e_blur:1000/v1759538264/88617414_vlboe8.jpg")
+            );
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: ken-burns 30s ease-in-out infinite alternate;
+        z-index: -1;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        animation: fade-in-up 1s 0.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        opacity: 0;
+    }
+
+    .hero-icon {
+        width: clamp(5rem, 15vw, 6rem);
+        height: auto;
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+        filter: drop-shadow(0 0 12px var(--color-primary));
+    }
+
+    .hero-name {
+        font-family: var(--font-display);
+        font-size: clamp(2.2rem, 6vw, 3.5rem);
+        line-height: 1.1;
+        margin: 0 0 0.5rem 0;
+        color: var(--color-white);
+        background: linear-gradient(90deg, #ccc, white, #ccc);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: metallic-sheen 6s linear infinite;
+    }
+
+    .hero-username {
+        display: inline-block;
+        font-family: var(--font-ui);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        color: var(--color-primary-light);
+        background: linear-gradient(
+            90deg,
+            var(--color-primary-light),
+            white,
+            var(--color-primary-light)
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+        margin-bottom: 1.5rem;
+        animation:
+            metallic-sheen 4s linear infinite,
+            glow-text 3s ease-in-out infinite;
+    }
+
+    .hero-username:hover {
+        color: var(--color-primary);
+    }
+
+    .hero-quote {
+        font-size: clamp(1.1rem, 3vw, 1.25rem);
+        font-family: var(--font-secondary);
+        line-height: 1.2;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-style: italic;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .body-no-scroll {
+        overflow: hidden;
+    }
+    .gallery-section {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+    .gallery-grid {
+        column-count: 2;
+        column-gap: 1rem;
+    }
+    .gallery-item-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        break-inside: avoid;
+        filter: grayscale(100%);
+        transition: transform 0.3s ease;
+        box-shadow: var(--shadow-subtle);
+        cursor: pointer;
+    }
+    .gallery-item-wrapper:hover {
+        filter: grayscale(0%);
+    }
+    .gallery-item {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .gallery-item-wrapper:hover .gallery-item {
+        transform: scale(1.05);
+    }
+    .gallery-item-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        display: flex;
+        align-items: flex-end;
+        padding: 1rem;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    .gallery-item-wrapper:hover .gallery-item-overlay {
+        opacity: 1;
+    }
+    .overlay-text {
+        color: var(--color-white);
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .lightbox {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(10, 10, 10, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+    }
+    .lightbox.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .lightbox-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    #lightbox-image {
+        max-width: 90vw;
+        max-height: 85vh;
+        object-fit: contain;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        transition:
+            transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.3s ease;
+        border-radius: 1rem;
+    }
+    #lightbox-image.is-fading {
+        opacity: 0;
+    }
+    .lightbox.is-opening #lightbox-image {
+        transform: translate(var(--tx), var(--ty)) scale(var(--scale));
+    }
+    .lightbox.is-closing #lightbox-image {
+        transform: translate(var(--tx), var(--ty)) scale(var(--scale));
+    }
+    .lightbox.is-closing {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .lightbox-caption {
+        color: var(--color-gray-300);
+        font-family: var(--font-ui);
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .lightbox-caption span {
+        color: var(--color-primary-light);
+        margin: 0 0.5rem;
+    }
+    .lightbox-close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    .lightbox-close:hover {
+        color: var(--color-primary-light);
+        text-shadow: 0 0 8px var(--color-primary-light);
+    }
+    .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.5rem;
+        color: rgba(255, 255, 255, 0.6);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0 1rem;
+        transition: all 0.3s;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    .lightbox-nav:hover {
+        color: white;
+    }
+    .lightbox-nav.prev {
+        left: 1rem;
+    }
+    .lightbox-nav.next {
+        right: 1rem;
+    }
+
+    .tag-item-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        cursor: pointer;
+        width: 8rem;
+        transition: transform 0.2s ease-in-out;
+        gap: 1rem;
+    }
+    .tag-image {
+        width: 6rem;
+        height: 6rem;
+        object-fit: cover;
+        flex-shrink: 0;
+        border: 4px solid var(--color-gray-300);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        box-shadow:
+            0 20px 25px -5px rgb(0 0 0 / 0.1),
+            0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+    .tag-item-container:hover .tag-image {
+        border-color: var(--color-primary);
+    }
+    .tag-item-container.active-container .tag-image {
+        border-color: var(--color-primary);
+        animation: glow 3s ease-in-out infinite;
+    }
+    .tag-label {
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin: 0;
+        padding: 0.4rem 1.2rem;
+        line-height: 1;
+        border-radius: 9999px;
+        transition: all 0.3s ease;
+        color: var(--color-primary-dark);
+        background-color: color-mix(
+            in srgb,
+            var(--color-white) 5%,
+            transparent
+        );
+        border: var(--border-glass);
+        backdrop-filter: blur(5px);
+    }
+    .tag-label:hover {
+        background-color: color-mix(
+            in srgb,
+            var(--color-white) 10%,
+            transparent
+        );
+        border-color: var(--color-primary);
+        color: var(--color-primary-light);
+        text-shadow: 0 0 8px var(--color-primary);
+    }
+    .tag-label.active {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+        border-color: var(--color-primary);
+        text-shadow: none;
+    }
+    .tag-label.active:hover {
+        background-color: var(--color-primary-light);
+        border-color: var(--color-primary-light);
+    }
+    .tag-item-container:hover {
+        transform: scale(1.02);
+    }
+    .tag-item-container.active-container {
+        transform: scale(1.02);
+    }
+
+    @media (min-width: 768px) {
+        main {
+            padding-top: 70px;
+        }
+        .gallery-section {
+            padding: 2rem;
+        }
+        .gallery-grid {
+            column-count: 3;
+            column-gap: 1.5rem;
+        }
+        .gallery-item-wrapper {
+            margin-bottom: 1.5rem;
+        }
+        .lightbox-nav {
+            font-size: 2rem;
+            color: var(--color-primary);
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+        }
+        .lightbox-nav:hover {
+            color: var(--color-primary-light);
+            background-color: rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 8px var(--color-primary-light);
+        }
+
+        .tag-item-container {
+            width: 9rem; /* 144px */
+        }
+
+        .tag-image {
+            width: 7rem; /* 112px */
+            height: 7rem; /* 112px */
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .gallery-grid {
+            column-count: 4;
+            column-gap: 1.5rem;
+        }
+    }
+</style>
+
+<style>
+    .gallery-presentation {
+        padding: 1rem;
+    }
+    .gallery-presentation-container {
+        max-width: 72rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-title {
+        padding: 1rem;
+    }
+    .filters-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-track-wrapper {
+        flex: 1 1 0%;
+        width: 100%;
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent
+        );
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent
+        );
+    }
+    .carousel-container {
+        position: relative;
+        flex: 1 1 0%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .carousel-arrow {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        padding: 0.75rem;
+        background-color: rgba(38, 38, 38, 0.8);
+        border-radius: 9999px;
+        color: var(--color-primary);
+        transition: all 0.2s ease-in-out;
+        border: none;
+        cursor: pointer;
+        display: none;
+    }
+    .carousel-arrow:hover {
+        background-color: #404040;
+        color: var(--color-primary-light);
+    }
+    .carousel-arrow svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    #scroll-left {
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    #scroll-right {
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+    #chip-todos {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition:
+            max-height 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            padding 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            margin-top 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    #chip-todos.is-visible {
+        opacity: 1;
+        max-height: 5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 1.5rem;
+        pointer-events: auto;
+    }
+    #carousel-track {
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        min-height: 10rem;
+        width: 100%;
+    }
+    #filter-list {
+        display: flex;
+        gap: 2.5rem;
+        white-space: nowrap;
+        list-style: none;
+        padding: 3rem 0;
+        margin: 0;
+    }
+    #carousel-track::-webkit-scrollbar {
+        display: none;
+    }
+    #carousel-track {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    @media (min-width: 768px) {
+        .gallery-presentation {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .carousel-arrow {
+            display: block;
+        }
+    }
+    @media (min-width: 1024px) {
+        .gallery-presentation {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+</style>
+<style>
+    @keyframes ken-burns {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.05);
+        }
+    }
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+<script define:vars={{ allPhotos: photos, initialPhotos: shuffledPhotos }}>
+    function progressiveHeroBackground() {
+        const heroElement = document.querySelector(".hero");
+        if (!heroElement) return;
+
+        const gradient = "linear-gradient(rgba(0, 0, 0, 0.4), transparent)";
+        const mediumQualityUrl =
+            "https://res.cloudinary.com/dhcjs6gks/image/upload/w_1200,q_auto/v1759538264/88617414_vlboe8.jpg";
+        const highQualityUrl =
+            "https://res.cloudinary.com/dhcjs6gks/image/upload/q_auto/v1759538264/88617414_vlboe8.jpg";
+
+        const mediumImage = new Image();
+        mediumImage.src = mediumQualityUrl;
+        mediumImage.onload = () => {
+            heroElement.style.setProperty(
+                "--hero-bg-image",
+                `url(${mediumQualityUrl})`,
+            );
+            const highImage = new Image();
+            highImage.src = highQualityUrl;
+            highImage.onload = () => {
+                heroElement.style.setProperty(
+                    "--hero-bg-image",
+                    `url(${highQualityUrl})`,
+                );
+            };
+        };
+    }
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+
+    let galleryItems;
+    let currentIndex = 0;
+    let currentImageLoader = null;
+
+    function updateLightboxContent(index, size = "small") {
+        const photo = currentPhotos[index];
+        if (!photo) return;
+
+        if (currentImageLoader) currentImageLoader.onload = null;
+
+        if (size === "small") {
+            lightboxImage.src = photo.small;
+            currentImageLoader = new Image();
+            currentImageLoader.src = photo.medium;
+            currentImageLoader.onload = () => {
+                if (currentIndex === index)
+                    updateLightboxContent(index, "medium");
+            };
+        } else if (size === "medium") {
+            lightboxImage.src = photo.medium;
+            currentImageLoader = new Image();
+            currentImageLoader.src = photo.large;
+            currentImageLoader.onload = () => {
+                if (currentIndex === index)
+                    updateLightboxContent(index, "large");
+            };
+        } else {
+            lightboxImage.src = photo.large;
+        }
+
+        lightboxCaption.innerHTML = photo.tags
+            .map((tag) => `<span>#${tag}</span>`)
+            .join(" ");
+    }
+
+    function openLightbox(index) {
+        currentIndex = index;
+        updateLightboxContent(currentIndex, "small");
+
+        lightbox.classList.add("is-open");
+        document.body.classList.add("body-no-scroll");
+
+        requestAnimationFrame(() => {
+            const thumbnail = galleryItems[index];
+            const thumbRect = thumbnail.getBoundingClientRect();
+
+            const tx =
+                thumbRect.left + thumbRect.width / 2 - window.innerWidth / 2;
+            const ty =
+                thumbRect.top + thumbRect.height / 2 - window.innerHeight / 2;
+            const scale = thumbRect.width / lightboxImage.offsetWidth;
+
+            lightbox.style.setProperty("--tx", `${tx}px`);
+            lightbox.style.setProperty("--ty", `${ty}px`);
+            lightbox.style.setProperty("--scale", scale);
+
+            lightbox.classList.add("is-opening");
+            requestAnimationFrame(() =>
+                lightbox.classList.remove("is-opening"),
+            );
+        });
+    }
+
+    function closeLightbox() {
+        const thumbnail = galleryItems[currentIndex];
+        const thumbRect = thumbnail.getBoundingClientRect();
+
+        const tx = thumbRect.left + thumbRect.width / 2 - window.innerWidth / 2;
+        const ty =
+            thumbRect.top + thumbRect.height / 2 - window.innerHeight / 2;
+        const scale = thumbRect.width / lightboxImage.offsetWidth;
+
+        lightbox.style.setProperty("--tx", `${tx}px`);
+        lightbox.style.setProperty("--ty", `${ty}px`);
+        lightbox.style.setProperty("--scale", scale);
+
+        lightbox.classList.add("is-closing");
+
+        lightbox.addEventListener(
+            "transitionend",
+            () => {
+                lightbox.classList.remove("is-open");
+                lightbox.classList.remove("is-closing");
+                document.body.classList.remove("body-no-scroll");
+            },
+            { once: true },
+        );
+    }
+
+    function changeImageWithFade(direction) {
+        lightboxImage.classList.add("is-fading");
+        lightboxImage.addEventListener(
+            "transitionend",
+            () => {
+                if (direction === "next") {
+                    currentIndex = (currentIndex + 1) % currentPhotos.length;
+                } else {
+                    currentIndex =
+                        (currentIndex - 1 + currentPhotos.length) %
+                        currentPhotos.length;
+                }
+                updateLightboxContent(currentIndex, "small");
+                lightboxImage.classList.remove("is-fading");
+            },
+            { once: true },
+        );
+    }
+
+    const showNextImage = () => changeImageWithFade("next");
+    const showPrevImage = () => changeImageWithFade("prev");
+
+    const galleryGrid = document.querySelector(".gallery-grid");
+    let currentPhotos = [...initialPhotos];
+
+    const getRandomTagsJS = (tags, count = 2) => {
+        if (!tags || tags.length === 0) return "";
+        const shuffled = [...tags].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count).join(" / ");
+    };
+
+    function renderGallery(filterTag) {
+        galleryGrid.innerHTML = "";
+
+        currentPhotos =
+            filterTag === "all"
+                ? [...allPhotos].sort(() => Math.random() - 0.5)
+                : allPhotos.filter((photo) => photo.tags.includes(filterTag));
+
+        currentPhotos.forEach((photo) => {
+            const itemWrapper = document.createElement("div");
+            itemWrapper.className = "gallery-item-wrapper";
+            itemWrapper.innerHTML = `
+                <img
+                    src="${photo.small}"
+                    alt="${photo.alt}"
+                    class="gallery-item"
+                    loading="lazy"
+                />
+                <div class="gallery-item-overlay">
+                    <p class="overlay-text">
+                        ${getRandomTagsJS(photo.tags)}
+                    </p>
+                </div>
+            `;
+            galleryGrid.appendChild(itemWrapper);
+        });
+
+        addLightboxListeners();
+    }
+
+    function addLightboxListeners() {
+        galleryItems = document.querySelectorAll(".gallery-item-wrapper");
+        galleryItems.forEach((item, index) => {
+            item.addEventListener("click", () => {
+                openLightbox(index);
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        progressiveHeroBackground();
+
+        const SCROLL_SPEED = 1;
+        const SCROLL_INTERVAL_MS = 20;
+        const MANUAL_SCROLL_STEP = 200;
+        const RESTART_DELAY_MS = 3000;
+
+        let scrollInterval;
+        const todosChip = document.getElementById("chip-todos");
+        const carouselTrack = document.getElementById("carousel-track");
+        const filterList = document.getElementById("filter-list");
+        const scrollLeftBtn = document.getElementById("scroll-left");
+        const scrollRightBtn = document.getElementById("scroll-right");
+
+        function startCarouselScroll() {
+            stopCarouselScroll();
+            let isPaused = false;
+
+            const scroll = () => {
+                if (isPaused) return;
+                carouselTrack.scrollLeft += SCROLL_SPEED;
+                if (
+                    carouselTrack.scrollLeft >=
+                    carouselTrack.scrollWidth - carouselTrack.clientWidth
+                ) {
+                    carouselTrack.scrollLeft = 0;
+                }
+            };
+
+            scrollInterval = setInterval(scroll, SCROLL_INTERVAL_MS);
+            carouselTrack.onmouseenter = () => (isPaused = true);
+            carouselTrack.onmouseleave = () => (isPaused = false);
+        }
+
+        function stopCarouselScroll() {
+            clearInterval(scrollInterval);
+        }
+
+        function scrollCarousel(direction) {
+            stopCarouselScroll();
+            carouselTrack.scrollBy({
+                left:
+                    direction === "left"
+                        ? -MANUAL_SCROLL_STEP
+                        : MANUAL_SCROLL_STEP,
+                behavior: "smooth",
+            });
+            setTimeout(startCarouselScroll, RESTART_DELAY_MS);
+        }
+
+        function setActiveChip(clickedChip) {
+            const isTodosChipClicked = clickedChip.id === "chip-todos";
+
+            stopCarouselScroll();
+
+            const allTagChips = filterList.querySelectorAll(
+                ".tag-item-container",
+            );
+            allTagChips.forEach((chip) => {
+                chip.classList.remove("active-container");
+            });
+
+            todosChip.classList.toggle("is-visible", !isTodosChipClicked);
+            todosChip.classList.toggle("active", isTodosChipClicked);
+            clickedChip.classList.toggle(
+                "active-container",
+                !isTodosChipClicked,
+            );
+
+            const tag = clickedChip.dataset.tag;
+            renderGallery(tag);
+            setTimeout(startCarouselScroll, RESTART_DELAY_MS);
+        }
+
+        function generateFilterChips() {
+            const tagsCount = {};
+            allPhotos.forEach((photo) => {
+                photo.tags.forEach((tag) => {
+                    tagsCount[tag] = (tagsCount[tag] || 0) + 1;
+                });
+            });
+
+            const sortedTags = Object.keys(tagsCount).sort();
+
+            sortedTags.forEach((tag) => {
+                const count = tagsCount[tag];
+                const representativePhoto = allPhotos.find((p) =>
+                    p.tags.includes(tag),
+                );
+                const imageUrl = representativePhoto
+                    ? representativePhoto.small
+                    : "";
+
+                const li = document.createElement("li");
+                li.className = "tag-item-container";
+                li.dataset.tag = tag;
+                li.innerHTML = `<img src="${imageUrl}" alt="Icono para la etiqueta ${tag}" class="tag-image"><span class="tag-label">${tag} (${count})</span>`;
+                filterList.appendChild(li);
+            });
+
+            const allChips = [
+                todosChip,
+                ...filterList.querySelectorAll(".tag-item-container"),
+            ];
+            allChips.forEach((chip) => {
+                if (chip.dataset.tag === "all") chip.classList.add("active");
+                chip.addEventListener("click", () => setActiveChip(chip));
+            });
+        }
+
+        document
+            .getElementById("lightbox-close")
+            .addEventListener("click", closeLightbox);
+        document
+            .getElementById("lightbox-next")
+            .addEventListener("click", showNextImage);
+        document
+            .getElementById("lightbox-prev")
+            .addEventListener("click", showPrevImage);
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        scrollLeftBtn.addEventListener("click", () => scrollCarousel("left"));
+        scrollRightBtn.addEventListener("click", () => scrollCarousel("right"));
+
+        generateFilterChips();
+        addLightboxListeners();
+        startCarouselScroll();
+
+        document.addEventListener("keydown", (e) => {
+            if (!lightbox.classList.contains("is-open")) return;
+            switch (e.key) {
+                case "ArrowRight":
+                    showNextImage();
+                    break;
+                case "ArrowLeft":
+                    showPrevImage();
+                    break;
+                case "Escape":
+                    closeLightbox();
+                    break;
+            }
+        });
+    });
+</script>

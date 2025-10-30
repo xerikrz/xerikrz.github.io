@@ -1,0 +1,48 @@
+---
+import { useTranslations } from "../../i18n/utils.ts";
+const currentLocale = Astro.currentLocale || "en";
+const t = useTranslations(currentLocale);
+import data from "@data/data.json";
+const userData = data[currentLocale];
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSection from "../../layouts/HeroSection.astro";
+import AboutSection from "../../layouts/AboutSection.astro";
+import ProjectsSection from "../../layouts/portfolio/Projects.astro";
+import BlogSection from "../../layouts/BlogSection.astro";
+import ContactSection from "../../layouts/ContactSection.astro";
+
+const {
+    pageTitle = userData.fullname + " | " + t("home.title"),
+    pageDescription = userData.homeDescription,
+    pageKeywords = userData.homeKeywords,
+    fullname = userData.fullname,
+    username = userData.username,
+    biography = userData.biography,
+    aboutMe = userData.aboutMe,
+    footerQuote = userData.signature,
+    socials = userData.socials,
+    roles = userData.roles,
+    projects = userData.projects,
+} = Astro.props;
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    pageDescription={pageDescription}
+    pageKeywords={pageKeywords}
+    fullname={fullname}
+    footerQuote={footerQuote}
+    socials={socials}
+>
+    <HeroSection
+        fullname={fullname}
+        username={username}
+        biography={biography}
+        roles={roles}
+    />
+    <AboutSection aboutMe={aboutMe} roles={roles} />
+    <ProjectsSection projects={projects} />
+    <BlogSection />
+    <ContactSection username={username} socials={socials.concat(socials)} />
+</BaseLayout>

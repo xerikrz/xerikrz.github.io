@@ -1,0 +1,683 @@
+{
+    "en": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "I design and develop solutions by uniting creativity, data, and technology. My focus is transforming challenges into high-impact strategies that maximize results.",
+        "aboutMe": "I am a multidisciplinary professional with a passion for connecting creativity, data, and technology. My approach integrates advertising strategy with data analysis, software development, and visual storytelling through photography to build comprehensive, high-impact solutions.",
+        "signature": "Creating the future, one line of code at a time.",
+        "homDescription": "Professional portfolio of Erik Ramirez, data analyst, software developer, and advertising specialist with a passion for creative photography. I combine data, code, creativity, and photography to craft meaningful and visually impactful digital experiences.",
+        "homKeywords": "data analysis, data visualization, software development, web development, advertising, digital marketing, photography, creative portfolio, analytics, frontend, backend, full stack, data science, visualization, branding, photo editing",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Advertising Specialist",
+                "description": "Expert in brand strategy and advertising creativity. I develop high-impact campaigns that transform ideas into memorable experiences, fusing design, innovation, and strategy.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Anime animation: Commercial with an anime hand holding a soft drink.",
+                "highlights": [
+                    "Brand Strategist",
+                    "High-Impact Campaigns",
+                    "Design",
+                    "Innovation",
+                    "Strategy",
+                    "Scalable Growth"
+                ],
+                "slug": "advertising-specialist",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Data Analyst",
+                "description": "Specialist in extracting, processing, and analyzing large volumes of data. I turn complex findings into clear insights, visualizations, and reports to guide strategy and optimize results.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analyst manipulating complex controls and reviewing printed data outputs.",
+                "highlights": [],
+                "slug": "data-analyst",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Software Developer",
+                "description": "I design and implement robust software solutions. I convert business requirements into efficient applications, managing the full cycle to optimize operations and maximize strategic impact.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animation of hands rapidly typing on a futuristic interface or control panel, executing complex commands on a high-tech system.",
+                "highlights": [],
+                "slug": "software-developer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Photographer",
+                "description": "I tell stories with light. I specialize in capturing genuine moments and the essence of people/brands, crafting timeless images where technique meets vision.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animation of a professional photographer manipulating a DSLR camera, capturing a dramatic landscape of the sky and mountains.",
+                "highlights": [],
+                "slug": "photographer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            }
+        ],
+        "projects": [
+            {
+                "title": "Coming Soon",
+                "description": "This project will be available soon. Stay tuned to see it shortly.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Coming Soon Project",
+                "tags": [
+                    "Coming Soon",
+                    "Portfolio",
+                    "Soon"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "es": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Diseño y desarrollo soluciones uniendo creatividad, datos y tecnología. Mi enfoque es transformar desafíos en estrategias de alto impacto que maximicen los resultados.",
+        "aboutMe": "Soy un profesional multidisciplinario con pasión por conectar creatividad, datos y tecnología. Mi enfoque integra estrategia publicitaria con análisis de datos, desarrollo de software y narrativa visual mediante fotografía para construir soluciones integrales de alto impacto.",
+        "signature": "Creando el futuro, una línea de código a la vez.",
+        "homDescription": "Portafolio profesional de Erik Ramirez, analista de datos, desarrollador de software y especialista en publicidad con pasión por la fotografía creativa. Combino datos, código, creatividad y fotografía para generar experiencias digitales significativas y visualmente impactantes.",
+        "homKeywords": "análisis de datos, visualización de datos, desarrollo de software, desarrollo web, publicidad, marketing digital, fotografía, portafolio creativo, analítica, frontend, backend, full stack, ciencia de datos, visualización, branding, edición fotográfica",
+        "navigation": [
+            {
+                "title": "Inicio",
+                "link": "/",
+                "icon": "home"
+            },
+            {
+                "title": "Sobre mí",
+                "link": "/#about",
+                "icon": "about"
+            },
+            {
+                "title": "Proyectos",
+                "link": "/#projects",
+                "icon": "projects"
+            },
+            {
+                "title": "Blog",
+                "link": "/#blog",
+                "icon": "blog"
+            },
+            {
+                "title": "Contacto",
+                "link": "/#contact",
+                "icon": "contact"
+            }
+        ],
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Especialista en Publicidad",
+                "description": "Experto en estrategia de marca y creatividad publicitaria. Desarrollo campañas de alto impacto que transforman ideas en experiencias memorables, fusionando diseño, innovación y estrategia.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Animación de anime: Comercial con una mano de anime sosteniendo un refresco.",
+                "highlights": [
+                    "Estratega de Marca",
+                    "Campañas de Alto Impacto",
+                    "Diseño",
+                    "Innovación",
+                    "Estrategia",
+                    "Crecimiento Escalable"
+                ],
+                "slug": "advertising-specialist",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Analista de Datos",
+                "description": "Especialista en extracción, procesamiento y análisis de grandes volúmenes de datos. Transformo hallazgos complejos en insights claros, visualizaciones y reportes para guiar la estrategia y optimizar resultados.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analista manipulando controles complejos y revisando salidas de datos impresas.",
+                "highlights": [],
+                "slug": "data-analyst",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Desarrollador de Software",
+                "description": "Diseño e implemento soluciones de software robustas. Convierto requerimientos de negocio en aplicaciones eficientes, gestionando todo el ciclo para optimizar operaciones y maximizar impacto estratégico.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animación de manos escribiendo rápidamente en una interfaz futurista, ejecutando comandos complejos en un sistema de alta tecnología.",
+                "highlights": [],
+                "slug": "software-developer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Fotógrafo",
+                "description": "Cuento historias con la luz. Me especializo en capturar momentos genuinos y la esencia de personas/marcas, creando imágenes atemporales donde la técnica se encuentra con la visión.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animación de un fotógrafo profesional manipulando una cámara DSLR, capturando un paisaje dramático del cielo y las montañas.",
+                "highlights": [],
+                "slug": "photographer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            }
+        ],
+        "projects": [
+            {
+                "title": "Próximamente",
+                "description": "Este proyecto estará disponible pronto. Mantente atento para verlo en breve.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Proyecto Próximamente",
+                "tags": [
+                    "Próximamente",
+                    "Portafolio",
+                    "Pronto"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "de": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Ich entwerfe und entwickle Lösungen, die Kreativität, Daten und Technologie vereinen. Mein Ansatz besteht darin, Herausforderungen in wirkungsstarke Strategien zu verwandeln, um Ergebnisse zu maximieren.",
+        "aboutMe": "Ich bin ein multidisziplinärer Profi mit einer Leidenschaft dafür, Kreativität, Daten und Technologie zu verbinden. Mein Ansatz kombiniert Werbestrategie mit Datenanalyse, Softwareentwicklung und visueller Erzählung durch Fotografie, um ganzheitliche, wirkungsvolle Lösungen zu schaffen.",
+        "signature": "Die Zukunft gestalten – eine Codezeile nach der anderen.",
+        "homDescription": "Professionelles Portfolio von Erik Ramirez, Datenanalyst, Softwareentwickler und Werbespezialist mit Leidenschaft für kreative Fotografie. Ich kombiniere Daten, Code, Kreativität und Fotografie, um bedeutungsvolle und visuell eindrucksvolle digitale Erlebnisse zu schaffen.",
+        "homKeywords": "Datenanalyse, Datenvisualisierung, Softwareentwicklung, Webentwicklung, Werbung, digitales Marketing, Fotografie, kreatives Portfolio, Analytik, Frontend, Backend, Full Stack, Data Science, Visualisierung, Branding, Fotobearbeitung",
+        "navigation": [
+            {
+                "title": "Startseite",
+                "link": "/",
+                "icon": "home"
+            },
+            {
+                "title": "Über mich",
+                "link": "/#about",
+                "icon": "about"
+            },
+            {
+                "title": "Projekte",
+                "link": "/#projects",
+                "icon": "projects"
+            },
+            {
+                "title": "Blog",
+                "link": "/#blog",
+                "icon": "blog"
+            },
+            {
+                "title": "Kontakt",
+                "link": "/#contact",
+                "icon": "contact"
+            }
+        ],
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Werbespezialist",
+                "description": "Experte für Markenstrategie und Werbekreativität. Ich entwickle wirkungsstarke Kampagnen, die Ideen in unvergessliche Erlebnisse verwandeln – eine Fusion aus Design, Innovation und Strategie.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Anime-Animation: Werbung mit einer Anime-Hand, die ein Erfrischungsgetränk hält.",
+                "highlights": [
+                    "Markenstrategie",
+                    "Wirkungsvolle Kampagnen",
+                    "Design",
+                    "Innovation",
+                    "Strategie",
+                    "Skalierbares Wachstum"
+                ],
+                "slug": "advertising-specialist",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Datenanalyst",
+                "description": "Spezialist für die Extraktion, Verarbeitung und Analyse großer Datenmengen. Ich verwandle komplexe Erkenntnisse in klare Insights, Visualisierungen und Berichte, um Strategien zu leiten und Ergebnisse zu optimieren.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analyst, der komplexe Steuerungen bedient und gedruckte Datenausgaben überprüft.",
+                "highlights": [],
+                "slug": "data-analyst",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Softwareentwickler",
+                "description": "Ich entwerfe und implementiere robuste Softwarelösungen. Ich verwandle Geschäftsanforderungen in effiziente Anwendungen und verwalte den gesamten Entwicklungszyklus, um Abläufe zu optimieren und strategische Wirkung zu maximieren.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animation von Händen, die schnell auf einer futuristischen Benutzeroberfläche tippen und komplexe Befehle in einem Hochtechnologie-System ausführen.",
+                "highlights": [],
+                "slug": "software-developer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Fotograf",
+                "description": "Ich erzähle Geschichten mit Licht. Ich spezialisiere mich darauf, echte Momente und die Essenz von Menschen und Marken einzufangen – und erschaffe zeitlose Bilder, in denen Technik und Vision aufeinandertreffen.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animation eines professionellen Fotografen, der eine DSLR-Kamera bedient und eine dramatische Landschaft mit Himmel und Bergen aufnimmt.",
+                "highlights": [],
+                "slug": "photographer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            }
+        ],
+        "projects": [
+            {
+                "title": "Demnächst",
+                "description": "Dieses Projekt wird bald verfügbar sein. Bleiben Sie dran, um es bald zu sehen.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Projekt Demnächst",
+                "tags": [
+                    "Demnächst",
+                    "Portfolio",
+                    "Bald"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "ru": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Я проектирую и разрабатываю решения, объединяющие креативность, данные и технологии. Мой подход заключается в превращении сложных задач в стратегии с высоким воздействием, направленные на максимизацию результатов.",
+        "aboutMe": "Я многопрофильный специалист, увлечённый соединением креативности, данных и технологий. Мой подход сочетает рекламную стратегию с анализом данных, разработкой программного обеспечения и визуальным повествованием через фотографию, чтобы создавать комплексные и эффективные решения.",
+        "signature": "Создаю будущее — строка кода за строкой.",
+        "homDescription": "Профессиональное портфолио Эрика Рамиреса — аналитика данных, разработчика программного обеспечения и специалиста по рекламе, увлечённого творческой фотографией. Я объединяю данные, код, креатив и фотографию, чтобы создавать значимые и визуально впечатляющие цифровые решения.",
+        "homKeywords": "анализ данных, визуализация данных, разработка программного обеспечения, веб-разработка, реклама, цифровой маркетинг, фотография, креативное портфолио, аналитика, frontend, backend, full stack, data science, визуализация, брендинг, обработка фотографий",
+        "navigation": [
+            {
+                "title": "Главная",
+                "link": "/",
+                "icon": "home"
+            },
+            {
+                "title": "Обо мне",
+                "link": "/#about",
+                "icon": "about"
+            },
+            {
+                "title": "Проекты",
+                "link": "/#projects",
+                "icon": "projects"
+            },
+            {
+                "title": "Блог",
+                "link": "/#blog",
+                "icon": "blog"
+            },
+            {
+                "title": "Контакты",
+                "link": "/#contact",
+                "icon": "contact"
+            }
+        ],
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Специалист по рекламе",
+                "description": "Эксперт в области бренд-стратегии и креативной рекламы. Разрабатываю эффективные кампании, превращающие идеи в запоминающийся опыт, объединяя дизайн, инновации и стратегию.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Аниме-анимация: реклама, где рука персонажа держит освежающий напиток.",
+                "highlights": [
+                    "Бренд-стратегия",
+                    "Высокое воздействие кампаний",
+                    "Дизайн",
+                    "Инновации",
+                    "Стратегия",
+                    "Масштабируемый рост"
+                ],
+                "slug": "advertising-specialist",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Аналитик данных",
+                "description": "Специалист по извлечению, обработке и анализу больших объемов данных. Превращаю сложные находки в понятные инсайты, визуализации и отчеты, помогающие выстраивать стратегию и повышать эффективность.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Аналитик управляет сложными системами и анализирует данные на экране.",
+                "highlights": [],
+                "slug": "data-analyst",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Разработчик программного обеспечения",
+                "description": "Проектирую и реализую надёжные программные решения. Превращаю бизнес-требования в эффективные приложения, управляя всем циклом разработки для оптимизации процессов и увеличения стратегического эффекта.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Анимация рук, быстро набирающих команды на футуристическом интерфейсе высокотехнологичной системы.",
+                "highlights": [],
+                "slug": "software-developer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Фотограф",
+                "description": "Я рассказываю истории с помощью света. Специализируюсь на запечатлении подлинных моментов и сути людей или брендов, создавая вневременные изображения, где техника встречается с видением.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Анимация профессионального фотографа, работающего с DSLR-камерой и снимающего драматический пейзаж.",
+                "highlights": [],
+                "slug": "photographer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            }
+        ],
+        "projects": [
+            {
+                "title": "Скоро",
+                "description": "Этот проект скоро будет доступен. Следите за обновлениями, чтобы увидеть его в ближайшее время.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Проект Скоро",
+                "tags": [
+                    "Скоро",
+                    "Портфолио",
+                    "В разработке"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "pt": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Eu projeto e desenvolvo soluções unindo criatividade, dados e tecnologia. Meu foco é transformar desafios em estratégias de alto impacto que maximizam resultados.",
+        "aboutMe": "Sou um profissional multidisciplinar com paixão por conectar criatividade, dados e tecnologia. Minha abordagem integra estratégia publicitária com análise de dados, desenvolvimento de software e narrativa visual através da fotografia para construir soluções completas e de alto impacto.",
+        "signature": "Criando o futuro, uma linha de código por vez.",
+        "homDescription": "Portfólio profissional de Erik Ramirez, analista de dados, desenvolvedor de software e especialista em publicidade com paixão pela fotografia criativa. Combino dados, código, criatividade e fotografia para criar experiências digitais significativas e visualmente impactantes.",
+        "homKeywords": "análise de dados, visualização de dados, desenvolvimento de software, desenvolvimento web, publicidade, marketing digital, fotografia, portfólio criativo, analytics, frontend, backend, full stack, ciência de dados, visualização, branding, edição de fotos",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Especialista em Publicidade",
+                "description": "Especialista em estratégia de marca e criatividade publicitária. Desenvolvo campanhas de alto impacto que transformam ideias em experiências memoráveis, combinando design, inovação e estratégia.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Animação de anime: Comercial com uma mão de anime segurando um refrigerante.",
+                "highlights": [
+                    "Estrategista de Marca",
+                    "Campanhas de Alto Impacto",
+                    "Design",
+                    "Inovação",
+                    "Estratégia",
+                    "Crescimento Escalável"
+                ],
+                "slug": "advertising-specialist",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Analista de Dados",
+                "description": "Especialista em extrair, processar e analisar grandes volumes de dados. Transformo descobertas complexas em insights claros, visualizações e relatórios para orientar a estratégia e otimizar resultados.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analista manipulando controles complexos e revisando dados impressos.",
+                "highlights": [],
+                "slug": "data-analyst",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Desenvolvedor de Software",
+                "description": "Projetei e implemento soluções de software robustas. Converto requisitos de negócios em aplicações eficientes, gerenciando todo o ciclo para otimizar operações e maximizar impacto estratégico.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animação de mãos digitando rapidamente em uma interface futurista ou painel de controle, executando comandos complexos em um sistema de alta tecnologia.",
+                "highlights": [],
+                "slug": "software-developer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Fotógrafo",
+                "description": "Conto histórias com luz. Especializo-me em capturar momentos genuínos e a essência de pessoas/marcas, criando imagens atemporais onde a técnica encontra a visão.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animação de um fotógrafo profissional manipulando uma câmera DSLR, capturando uma paisagem dramática do céu e das montanhas.",
+                "highlights": [],
+                "slug": "photographer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            }
+        ],
+        "projects": [
+            {
+                "title": "Em Breve",
+                "description": "Este projeto estará disponível em breve. Fique atento para vê-lo em breve.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Projeto Em Breve",
+                "tags": [
+                    "Em Breve",
+                    "Portfólio",
+                    "Em breve"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "fr": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Je conçois et développe des solutions en alliant créativité, données et technologie. Mon objectif est de transformer les défis en stratégies à fort impact qui maximisent les résultats.",
+        "aboutMe": "Je suis un professionnel multidisciplinaire passionné par la connexion entre créativité, données et technologie. Mon approche intègre la stratégie publicitaire, l'analyse de données, le développement logiciel et le storytelling visuel à travers la photographie pour créer des solutions complètes et à fort impact.",
+        "signature": "Créer le futur, une ligne de code à la fois.",
+        "homDescription": "Portfolio professionnel d'Erik Ramirez, analyste de données, développeur logiciel et spécialiste en publicité, passionné par la photographie créative. Je combine données, code, créativité et photographie pour créer des expériences numériques significatives et visuellement impactantes.",
+        "homKeywords": "analyse de données, visualisation de données, développement logiciel, développement web, publicité, marketing digital, photographie, portfolio créatif, analytics, frontend, backend, full stack, data science, visualisation, branding, retouche photo",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Spécialiste en publicité",
+                "description": "Expert en stratégie de marque et créativité publicitaire. Je développe des campagnes à fort impact qui transforment les idées en expériences mémorables, en fusionnant design, innovation et stratégie.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Animation anime : publicité avec une main d'anime tenant une boisson gazeuse.",
+                "highlights": [
+                    "Stratégie de marque",
+                    "Campagnes à fort impact",
+                    "Design",
+                    "Innovation",
+                    "Stratégie",
+                    "Croissance évolutive"
+                ],
+                "slug": "advertising-specialist",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Analyste de données",
+                "description": "Spécialiste de l'extraction, du traitement et de l'analyse de grands volumes de données. Je transforme des résultats complexes en insights clairs, visualisations et rapports pour guider la stratégie et optimiser les résultats.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analyste manipulant des contrôles complexes et examinant des données imprimées.",
+                "highlights": [],
+                "slug": "data-analyst",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Développeur logiciel",
+                "description": "Je conçois et mets en œuvre des solutions logicielles robustes. Je transforme les exigences métier en applications efficaces, gérant tout le cycle pour optimiser les opérations et maximiser l'impact stratégique.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animation de mains tapant rapidement sur une interface futuriste ou un panneau de contrôle, exécutant des commandes complexes sur un système de haute technologie.",
+                "highlights": [],
+                "slug": "software-developer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            },
+            {
+                "title": "Photographe",
+                "description": "Je raconte des histoires avec la lumière. Je me spécialise dans la capture de moments authentiques et l'essence des personnes/marques, créant des images intemporelles où la technique rencontre la vision.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animation d'un photographe professionnel manipulant un appareil photo DSLR, capturant un paysage dramatique du ciel et des montagnes.",
+                "highlights": [],
+                "slug": "photographer",
+                "skills": [],
+                "tools": [],
+                "technologies": [],
+                "education": []
+            }
+        ],
+        "projects": [
+            {
+                "title": "Bientôt Disponible",
+                "description": "Ce projet sera bientôt disponible. Restez à l'écoute pour le découvrir prochainement.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Projet Bientôt Disponible",
+                "tags": [
+                    "Bientôt",
+                    "Portfolio",
+                    "Bientôt disponible"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    }
+}
