@@ -1,0 +1,145 @@
+---
+import GithubIcon from "./icons/GithubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import KaggleIcon from "./icons/KaggleIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+
+const socialIcons = {
+    github: GithubIcon,
+    linkedin: LinkedInIcon,
+    instagram: InstagramIcon,
+    kaggle: KaggleIcon,
+};
+
+const year = new Date().getFullYear();
+
+const {
+    fullname = "Your Fullname",
+    footerQuote = "Your Footer Quote",
+    socials = [
+        {
+            name: "LinkedIn",
+            url: "https://linkedin.com/in/username",
+        },
+        {
+            name: "GitHub",
+            url: "https://github.com/username",
+        },
+        {
+            name: "Kaggle",
+            url: "https://www.kaggle.com/username",
+        },
+        {
+            name: "Instagram",
+            url: "https://instagram.com/username",
+        },
+    ],
+} = Astro.props;
+---
+
+<footer id="main-footer">
+    <div class="container footer-container">
+        <p class="footer-copyright">&copy; {year} {fullname}</p>
+        <p class="footer-quote">{footerQuote}</p>
+        <div class="footer-socials">
+            {
+                socials.map((item) => {
+                    const IconComponent = socialIcons[item.name.toLowerCase()];
+                    return (
+                        <a
+                            href={item.url}
+                            target="_blank"
+                            aria-label={item.name}
+                        >
+                            <IconComponent />
+                        </a>
+                    );
+                })
+            }
+        </div>
+    </div>
+</footer>
+
+<style is:global>
+    #main-footer {
+        background-color: var(--color-gray-900);
+        text-align: center;
+        padding: 0.25rem 1rem;
+        padding-bottom: 5rem;
+        color: var(--color-gray-600);
+        border-top: 2px solid var(--color-primary);
+        font-family: var(--font-secondary);
+    }
+
+    .footer-socials {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-socials a {
+        color: var(--color-gray-600);
+        transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .footer-socials a:hover {
+        color: var(--color-primary-light);
+        transform: scale(1.2);
+    }
+
+    .footer-socials svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-quote {
+        margin-top: 1rem;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        color: var(--color-primary-dark);
+        font-size: 1rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        #main-footer {
+            margin-bottom: 0px;
+            padding: 2rem 1rem;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-socials {
+            margin-bottom: 0;
+        }
+
+        .footer-quote {
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .footer-copyright {
+            font-size: 1rem;
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .footer-socials {
+            gap: 2rem;
+        }
+    }
+</style>

@@ -1,0 +1,193 @@
+---
+import { useTranslations } from "../../i18n/utils.ts";
+import { languagesList, defaultLang } from "../../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+interface Skill {
+    name: string;
+    icon: string;
+}
+
+interface Props {
+    technicalSkills: Skill[];
+    toolsSkills: Skill[];
+    softSkills: Skill[];
+}
+
+const {
+    technicalSkills = [
+        { name: "Python", icon: "🐍" },
+        { name: "SQL", icon: "🗃️" },
+        { name: "Power BI", icon: "📊" },
+        { name: "Excel", icon: "📈" },
+    ],
+    toolsSkills = [
+        { name: "Microsoft Office", icon: "💼" },
+        { name: "Google Workspace", icon: "📁" },
+        { name: "CRM Software", icon: "📇" },
+        { name: "Power Query", icon: "⚙️" },
+        { name: "Tableau", icon: "📊" },
+    ],
+    softSkills = [
+        { name: "Analytical Thinking", icon: "🧠" },
+        { name: "Effective Communication", icon: "💬" },
+        { name: "Problem Solving", icon: "🧩" },
+        { name: "Team Collaboration", icon: "🤝" },
+    ],
+} = Astro.props as Props;
+---
+
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">{t("skills.section.title")}</h2>
+        <p class="section-subtitle">{t("skills.section.subtitle")}</p>
+
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>{t("skills.category.technical")}</h3>
+                <div class="skills-grid">
+                    {
+                        technicalSkills.map((skill) => (
+                            <div class="skill-card">
+                                <div class="skill-icon">{skill.icon}</div>
+                                <span class="skill-name">{skill.name}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>{t("skills.category.tools")}</h3>
+                <div class="skills-grid">
+                    {
+                        toolsSkills.map((skill) => (
+                            <div class="skill-card">
+                                <div class="skill-icon">{skill.icon}</div>
+                                <span class="skill-name">{skill.name}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>{t("skills.category.strategic")}</h3>
+                <div class="skills-grid">
+                    {
+                        softSkills.map((skill) => (
+                            <div class="skill-card">
+                                <div class="skill-icon">{skill.icon}</div>
+                                <span class="skill-name">{skill.name}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #skills {
+        padding: 3rem 1rem;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    .skills-category {
+        width: 100%;
+    }
+
+    h3 {
+        font-family: var(--font-ui);
+        font-size: 1.25rem;
+        color: var(--color-primary-light);
+        margin-bottom: 1.5rem;
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .skill-card {
+        background: rgba(26, 26, 26, 0.5);
+        border: var(--border-glass);
+        border-radius: 12px;
+        padding: 1.5rem 1rem;
+        font-family: var(--font-ui);
+        font-size: 0.9rem;
+        color: var(--color-light);
+        transition: all 0.3s ease;
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 120px;
+        height: 120px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .skill-card:hover {
+        background: var(--color-primary);
+        color: var(--color-secondary);
+        border-color: var(--color-primary);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 25px rgba(0, 255, 102, 0.25);
+    }
+
+    .skill-icon {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    .skill-name {
+        margin-top: 1rem;
+        font-weight: 800;
+        font-size: 0.7rem;
+        line-height: 1.2;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        #skills {
+            padding: 4rem 2rem;
+        }
+
+        .skills-container {
+            gap: 4rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        .skill-card {
+            font-size: 1rem;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .skills-grid {
+            gap: 1rem;
+        }
+    }
+</style>

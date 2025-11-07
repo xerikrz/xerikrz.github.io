@@ -1,0 +1,66 @@
+{
+    "en": [
+        {
+            "lang": "Python",
+            "langExtension": "py",
+            "note": "## Decorators and Metaprogramming\n\n- **Higher-Order Functions:** Decorators are functions that modify or wrap other functions.\n- **Syntactic Sugar:** Using `@decorator` simplifies the syntax `my_func = decorator(my_func)`.\n- **Use Cases:** Logging, access control, caching, and argument validation.",
+            "code": "import time\n\ndef performance_logger(func):\n    def wrapper(*args, **kwargs):\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n        print(f\"{func.__name__} took {end_time - start_time:.2f}s\")\n        return result\n    return wrapper\n\n@performance_logger\ndef process_data(data):\n    # ..."
+        },
+        {
+            "lang": "JavaScript",
+            "langExtension": "js",
+            "note": "## Custom Hooks and Memoization\n\n- **Reusable Logic:** Custom Hooks allow you to extract and share stateful logic across components.\n- **Optimization:** `useCallback` and `useMemo` are crucial to prevent unnecessary re-renders by memoizing functions and values.\n- **Rules of Hooks:** Hooks can only be called at the top level of a functional component.",
+            "code": "import { useState, useCallback } from 'react';\n\nfunction useToggle(initialState = false) {\n  const [state, setState] = useState(initialState);\n\n  const toggle = useCallback(() => {\n    setState(prevState => !prevState);\n  }, []);\n\n  return [state, toggle];\n}"
+        },
+        {
+            "lang": "SQL",
+            "langExtension": "sql",
+            "note": "## Window Functions\n\n- **Calculations over Sets:** They allow you to perform calculations across a set of rows related to the current row.\n- **Without Grouping:** Unlike `GROUP BY`, they don't collapse rows, preserving the original detail.\n- **Analytical Power:** Ideal for rankings, time series, and moving averages.",
+            "code": "SELECT\n    employee_name,\n    department,\n    salary,\n    RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS rank_in_department\nFROM employees;"
+        },
+        {
+            "lang": "Rust",
+            "langExtension": "rs",
+            "note": "## Ownership and Borrowing\n\n- **Safety Guarantee:** The ownership system prevents memory errors (like null pointers or data races) at compile time.\n- **Key Rules:** Each value has a single 'owner'. When the owner goes out of scope, the value is dropped.\n- **Borrowing:** You can borrow an immutable reference (`&T`) or a mutable one (`&mut T`), but not both at the same time.",
+            "code": "fn main() {\n    let s1 = String::from(\"hello\");\n    let s2 = s1; // s1 moves to s2\n\n    // println!(\"{}, world!\", s1); // Error: s1 is no longer valid\n\n    takes_ownership(s2);\n}\n\nfn takes_ownership(some_string: String) {\n    println!(\"{}\", some_string);\n} // some_string is dropped here"
+        },
+        {
+            "lang": "Bash",
+            "langExtension": "sh",
+            "note": "## Advanced Bash Scripting\n\n- **Functions and Scope:** Functions help modularize code. Variables are global by default; use `local` for function scope.\n- **Error Handling:** Use `set -e` to exit if a command fails. `trap` allows executing code when signals are received (e.g., EXIT, INT).\n- **Parameter Expansion:** Use `${VAR:-default}` for default values or `${VAR:?error}` for validations.",
+            "code": "#!/bin/bash\n\nset -e\n\ncleanup() {\n    echo \"Cleaning temporary files...\"\n    # rm -f /tmp/temp_file\n}\n\ntrap cleanup EXIT\n\nmain() {\n    local name=\"${1:-World}\"\n    echo \"Hello, $name\"\n}\n\nmain \"$@\""
+        }
+    ],
+    "es": [
+        {
+            "lang": "Python",
+            "langExtension": "py",
+            "note": "## Decoradores y Metaprogramación\n\n- **Funciones de Orden Superior:** Los decoradores son funciones que modifican o envuelven otras funciones.\n- **Sintaxis Azucarada:** Usar `@decorator` simplifica la sintaxis `my_func = decorator(my_func)`.\n- **Casos de Uso:** Registro (logging), control de acceso, almacenamiento en caché y validación de argumentos.",
+            "code": "import time\n\ndef performance_logger(func):\n    def wrapper(*args, **kwargs):\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n        print(f\"{func.__name__} tardó {end_time - start_time:.2f}s\")\n        return result\n    return wrapper\n\n@performance_logger\ndef process_data(data):\n    # ..."
+        },
+        {
+            "lang": "JavaScript",
+            "langExtension": "js",
+            "note": "## Custom Hooks y Memoización\n\n- **Lógica Reutilizable:** Los Custom Hooks permiten extraer y compartir lógica de estado entre componentes.\n- **Optimización:** `useCallback` y `useMemo` son esenciales para evitar renderizados innecesarios mediante la memorización de funciones y valores.\n- **Reglas de los Hooks:** Los Hooks solo pueden llamarse en el nivel superior de un componente funcional.",
+            "code": "import { useState, useCallback } from 'react';\n\nfunction useToggle(initialState = false) {\n  const [state, setState] = useState(initialState);\n\n  const toggle = useCallback(() => {\n    setState(prevState => !prevState);\n  }, []);\n\n  return [state, toggle];\n}"
+        },
+        {
+            "lang": "SQL",
+            "langExtension": "sql",
+            "note": "## Funciones de Ventana\n\n- **Cálculos sobre Conjuntos:** Permiten realizar cálculos sobre un conjunto de filas relacionadas con la fila actual.\n- **Sin Agrupar:** A diferencia de `GROUP BY`, no colapsan las filas, manteniendo el detalle original.\n- **Potencia Analítica:** Ideales para rankings, series temporales y cálculos de promedios móviles.",
+            "code": "SELECT\n    employee_name,\n    department,\n    salary,\n    RANK() OVER (PARTITION BY department ORDER BY salary DESC) as rank_in_department\nFROM employees;"
+        },
+        {
+            "lang": "Rust",
+            "langExtension": "rs",
+            "note": "## Ownership y Borrowing\n\n- **Garantía de Seguridad:** El sistema de ownership previene errores de memoria (como punteros nulos o condiciones de carrera) en tiempo de compilación.\n- **Reglas Clave:** Cada valor tiene un único 'propietario'. Cuando el propietario sale del ámbito (scope), el valor se libera.\n- **Préstamos (Borrowing):** Se puede prestar una referencia inmutable (`&T`) o mutable (`&mut T`), pero no ambas al mismo tiempo.",
+            "code": "fn main() {\n    let s1 = String::from(\"hello\");\n    let s2 = s1; // s1 se mueve a s2\n\n    // println!(\"{}, world!\", s1); // Error: s1 ya no es válido\n\n    takes_ownership(s2);\n}\n\nfn takes_ownership(some_string: String) {\n    println!(\"{}\", some_string);\n} // some_string se libera aquí"
+        },
+        {
+            "lang": "Bash",
+            "langExtension": "sh",
+            "note": "## Scripting Avanzado en Bash\n\n- **Funciones y Alcance:** Las funciones ayudan a modularizar el código. Las variables son globales por defecto; usa `local` para restringir el alcance a la función.\n- **Manejo de Errores:** Usa `set -e` para salir si un comando falla. `trap` permite ejecutar código al recibir señales (por ejemplo, EXIT, INT).\n- **Expansión de Parámetros:** Usa `${VAR:-default}` para valores por defecto o `${VAR:?error}` para validaciones.",
+            "code": "#!/bin/bash\n\nset -e\n\ncleanup() {\n    echo \"Limpiando archivos temporales...\"\n    # rm -f /tmp/temp_file\n}\n\ntrap cleanup EXIT\n\nmain() {\n    local name=\"${1:-Mundo}\"\n    echo \"Hola, $name\"\n}\n\nmain \"$@\""
+        }
+    ]
+}
