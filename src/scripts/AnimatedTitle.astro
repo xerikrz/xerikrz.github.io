@@ -1,0 +1,47 @@
+---
+import { useTranslations } from "../i18n/utils.ts";
+import { languagesList, defaultLang } from "../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+const awayMessages = t("animatedTitle.awayMessages");
+---
+
+<script define:vars={{ awayMessages }}>
+    document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("load", () => {
+            const originalTitle = document.title.trim();
+
+            if (!originalTitle) return;
+
+            const awayText = awayMessages.join("  •  ") + "  •  ";
+
+            let scrollIndex = 0;
+            let intervalId;
+            let currentText = originalTitle;
+
+            function animateScroll(text) {
+                clearInterval(intervalId);
+                currentText = text;
+                scrollIndex = 0;
+                intervalId = setInterval(() => {
+                    document.title =
+                        currentText.substring(scrollIndex) +
+                        currentText.substring(0, scrollIndex);
+                    scrollIndex = (scrollIndex + 1) % currentText.length;
+                }, 250);
+            }
+
+            document.addEventListener("visibilitychange", () => {
+                if (document.hidden) {
+                    animateScroll(awayText);
+                } else {
+                    animateScroll(`${originalTitle} | `);
+                }
+            });
+
+            animateScroll(`${originalTitle} | `);
+        });
+    });
+</script>

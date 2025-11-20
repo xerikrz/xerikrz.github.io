@@ -1,0 +1,53 @@
+---
+import { defaultLang } from "../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+
+import "../styles/normalize.css";
+import "../styles/global.css";
+import "../styles/animations.css";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import GoogleAnalytics from "../scripts/GoogleAnalytics.astro";
+import LanguageSwitcher from "../components/LanguageSwitcher.astro";
+import AnimatedTitle from "../scripts/AnimatedTitle.astro";
+import Particles from "../components/Particles.astro";
+
+const {
+    pageTitle,
+    pageDescription,
+    pageKeywords,
+    fullname,
+    footerQuote: signature,
+    socials,
+} = Astro.props;
+---
+
+<html lang={currentLocale}>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
+        <meta name="author" content={fullname} />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&family=Inter:wght@400;500;700&family=Orbitron:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div id="background"></div>
+        <Header fullname={fullname} />
+        <slot />
+        <Footer fullname={fullname} footerQuote={signature} socials={socials} />
+        <LanguageSwitcher />
+        <GoogleAnalytics />
+        <AnimatedTitle />
+        <Particles />
+    </body>
+</html>

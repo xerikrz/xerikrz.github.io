@@ -1,0 +1,27 @@
+---
+
+---
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const contactNodes = document.querySelectorAll("#contact .node");
+        if (contactNodes.length === 0) return;
+
+        let currentlyLitNode = null;
+
+        function lightUpRandomNode() {
+            if (currentlyLitNode) {
+                currentlyLitNode.classList.remove("lit");
+            }
+
+            const randomIndex = Math.floor(Math.random() * contactNodes.length);
+            const randomNode = contactNodes[randomIndex];
+
+            randomNode.classList.add("lit");
+            currentlyLitNode = randomNode;
+        }
+
+        lightUpRandomNode();
+        setInterval(lightUpRandomNode, 1500);
+    });
+</script>

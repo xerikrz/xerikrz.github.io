@@ -1,0 +1,3179 @@
+{
+    "en": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "I design and develop solutions by uniting creativity, data, and technology. My focus is transforming challenges into high-impact strategies that maximize results.",
+        "aboutMe": "I am a multidisciplinary professional with a passion for connecting creativity, data, and technology. My approach integrates advertising strategy with data analysis, software development, and visual storytelling through photography to build comprehensive, high-impact solutions.",
+        "signature": "Creating the future, one line of code at a time.",
+        "homeDescription": "Professional portfolio of Erik Ramirez, data analyst, software developer, and advertising specialist with a passion for creative photography. I combine data, code, creativity, and photography to craft meaningful and visually impactful digital experiences.",
+        "homeKeywords": "data analysis, data visualization, software development, web development, advertising, digital marketing, photography, creative portfolio, analytics, frontend, backend, full stack, data science, visualization, branding, photo editing",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Advertising Specialist",
+                "description": "Expert in brand strategy and advertising creativity. I develop high-impact campaigns that transform ideas into memorable experiences, fusing design, innovation, and strategy.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Anime animation: Commercial with an anime hand holding a soft drink.",
+                "highlights": [
+                    "Creativity",
+                    "Campaign Conceptualization",
+                    "Concept Development",
+                    "Branding & Positioning",
+                    "Moodboarding",
+                    "Trend Visualization",
+                    "Audience Research",
+                    "Persuasive Communication"
+                ],
+                "slug": "advertising-specialist",
+                "education": {
+                    "degrees": [
+                        {
+                            "title": "",
+                            "institution": "",
+                            "year": "",
+                            "description": ""
+                        }
+                    ],
+                    "certifications": [
+                        {
+                            "title": "",
+                            "institution": "",
+                            "year": "",
+                            "url": ""
+                        }
+                    ],
+                    "courses": [
+                        {
+                            "title": "",
+                            "platform": "",
+                            "year": ""
+                        }
+                    ]
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Brand Identity Management",
+                            "icon": "🏷️"
+                        },
+                        {
+                            "name": "Creative Strategy",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Concept Development",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Campaign Design",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Visual Storytelling",
+                            "icon": "📖"
+                        },
+                        {
+                            "name": "Storyboarding",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Moodboarding",
+                            "icon": "🗂️"
+                        },
+                        {
+                            "name": "Data-Driven Strategy",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Trend Analysis & Benchmarking",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Audience Research",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Professional Presentations",
+                            "icon": "📁"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Adobe Photoshop",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Adobe Illustrator",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Adobe Lightroom",
+                            "icon": "🌅"
+                        },
+                        {
+                            "name": "Adobe Premiere",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Product Photography",
+                            "icon": "📸"
+                        },
+                        {
+                            "name": "Nano Banana",
+                            "icon": "🍌"
+                        },
+                        {
+                            "name": "Google Mixboard",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Google Analytics",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Google Trends",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Canva",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Notion",
+                            "icon": "📝"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Creativity",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Innovative Thinking",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "User Experience Mindset",
+                            "icon": "🌐"
+                        },
+                        {
+                            "name": "Brand Awareness",
+                            "icon": "⭐"
+                        },
+                        {
+                            "name": "Strategic Planning",
+                            "icon": "🗺️"
+                        },
+                        {
+                            "name": "Critical Thinking",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Problem Solving",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Effective Communication",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Team Collaboration",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Adaptability",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Data Analyst",
+                "description": "Specialist in extracting, processing, and analyzing large volumes of data. I turn complex findings into clear insights, visualizations, and reports to guide strategy and optimize results.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analyst manipulating complex controls and reviewing printed data outputs.",
+                "highlights": [
+                    "Data Analysis",
+                    "Advanced SQL",
+                    "Data Visualization",
+                    "Python",
+                    "Data Extraction & Cleaning",
+                    "Insights Discovery",
+                    "Data Visualization",
+                    "Database Management",
+                    "Database Design"
+                ],
+                "slug": "data-analyst",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "💾"
+                        },
+                        {
+                            "name": "Excel",
+                            "icon": "📈"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Pandas",
+                            "icon": "🐼"
+                        },
+                        {
+                            "name": "Polars",
+                            "icon": "❄️"
+                        },
+                        {
+                            "name": "NumPy",
+                            "icon": "🔢"
+                        },
+                        {
+                            "name": "Matplotlib",
+                            "icon": "📉"
+                        },
+                        {
+                            "name": "Seaborn",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Streamlit",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "Jupyter Notebook",
+                            "icon": "📓"
+                        },
+                        {
+                            "name": "Requests",
+                            "icon": "📡"
+                        },
+                        {
+                            "name": "BeautifulSoup",
+                            "icon": "🌸"
+                        },
+                        {
+                            "name": "Playwright",
+                            "icon": "🎭"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "OpenCV",
+                            "icon": "📷"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Data Extraction & Cleaning",
+                            "icon": "🧹"
+                        },
+                        {
+                            "name": "Insights Discovery",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Data Visualization",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Database Management",
+                            "icon": "🔧"
+                        },
+                        {
+                            "name": "Database Design",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Computer Vision",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Analytical Thinking",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Critical Thinking",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Effective Communication",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Problem Solving",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Team Collaboration",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Adaptability",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Software Developer",
+                "description": "I design and implement robust software solutions. I convert business requirements into efficient applications, managing the full cycle to optimize operations and maximize strategic impact.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animation of hands rapidly typing on a futuristic interface or control panel, executing complex commands on a high-tech system.",
+                "highlights": [
+                    "Full-Stack Developer",
+                    "Code Optimization",
+                    "AI Implementation",
+                    "Agile Methodologies",
+                    "Scalable Solutions",
+                    "Security Focus",
+                    "Database Management"
+                ],
+                "slug": "software-developer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Java",
+                            "icon": "☕"
+                        },
+                        {
+                            "name": "Rust",
+                            "icon": "🦀"
+                        },
+                        {
+                            "name": "Bash",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Git & GitHub",
+                            "icon": "🐙"
+                        },
+                        {
+                            "name": "Linux",
+                            "icon": "🐧"
+                        },
+                        {
+                            "name": "HTML5",
+                            "icon": "📄"
+                        },
+                        {
+                            "name": "CSS3",
+                            "icon": "🎨"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Django",
+                            "icon": "🦄"
+                        },
+                        {
+                            "name": "Astro",
+                            "icon": "🚀"
+                        },
+                        {
+                            "name": "FastAPI",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Docker",
+                            "icon": "🐳"
+                        },
+                        {
+                            "name": "Podman",
+                            "icon": "🦭"
+                        },
+                        {
+                            "name": "SQLAlchemy",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Pydantic",
+                            "icon": "📐"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Code Optimization",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "Agile Methodologies",
+                            "icon": "🔄"
+                        },
+                        {
+                            "name": "Scalability Awareness",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Security Awareness",
+                            "icon": "🔒"
+                        },
+                        {
+                            "name": "AI Implementation",
+                            "icon": "🤖"
+                        },
+                        {
+                            "name": "Goal Orientation",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Team Collaboration",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Problem Solving",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Effective Communication",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Analytical Thinking",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Critical Thinking",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Adaptability",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Photographer",
+                "description": "I tell stories with light. I specialize in capturing genuine moments and the essence of people/brands, crafting timeless images where technique meets vision.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animation of a professional photographer manipulating a DSLR camera, capturing a dramatic landscape of the sky and mountains.",
+                "slug": "photographer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                }
+            }
+        ],
+        "projects": [
+            {
+                "title": "Coming Soon",
+                "description": "This project will be available soon. Stay tuned to see it shortly.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Coming Soon Project",
+                "tags": [
+                    "Coming Soon",
+                    "Portfolio",
+                    "Soon"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "es": {
+        "fullname": "Erik Ramírez",
+        "username": "@xerikrz",
+        "biography": "Diseño y desarrollo soluciones uniendo creatividad, datos y tecnología. Mi enfoque se centra en transformar desafíos en estrategias de alto impacto que maximicen los resultados.",
+        "aboutMe": "Soy un profesional multidisciplinario apasionado por conectar creatividad, datos y tecnología. Mi enfoque integra estrategia publicitaria con análisis de datos, desarrollo de software y narración visual a través de la fotografía, creando soluciones integrales y de alto impacto.",
+        "signature": "Creando el futuro, una línea de código a la vez.",
+        "homeDescription": "Portafolio profesional de Erik Ramírez, analista de datos, desarrollador de software y especialista en publicidad con pasión por la fotografía creativa. Combino datos, código, creatividad y fotografía para crear experiencias digitales significativas y visualmente impactantes.",
+        "homeKeywords": "análisis de datos, visualización de datos, desarrollo de software, desarrollo web, publicidad, marketing digital, fotografía, portafolio creativo, analítica, frontend, backend, full stack, ciencia de datos, visualización, branding, edición fotográfica",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Especialista en Publicidad",
+                "description": "Experto en estrategia de marca y creatividad publicitaria. Desarrolla campañas de alto impacto que transforman ideas en experiencias memorables, fusionando diseño, innovación y estrategia.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Animación anime: Comercial con una mano sosteniendo una bebida gaseosa.",
+                "highlights": [
+                    "Estratega de Marca",
+                    "Campañas de Alto Impacto",
+                    "Diseño",
+                    "Innovación",
+                    "Estrategia",
+                    "Crecimiento Escalable"
+                ],
+                "slug": "advertising-specialist",
+                "education": {
+                    "degrees": [
+                        {
+                            "title": "",
+                            "institution": "",
+                            "year": "",
+                            "description": ""
+                        }
+                    ],
+                    "certifications": [
+                        {
+                            "title": "",
+                            "institution": "",
+                            "year": "",
+                            "url": ""
+                        }
+                    ],
+                    "courses": [
+                        {
+                            "title": "",
+                            "platform": "",
+                            "year": ""
+                        }
+                    ]
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Gestión de Identidad de Marca",
+                            "icon": "🏷️"
+                        },
+                        {
+                            "name": "Estrategia Creativa",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Desarrollo de Conceptos",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Diseño de Campañas",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Narrativa Visual",
+                            "icon": "📖"
+                        },
+                        {
+                            "name": "Storyboarding",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Moodboarding",
+                            "icon": "🗂️"
+                        },
+                        {
+                            "name": "Estrategia Basada en Datos",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Análisis de Tendencias y Benchmarking",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Investigación de Audiencias",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Presentaciones Profesionales",
+                            "icon": "📁"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Adobe Photoshop",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Adobe Illustrator",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Adobe Lightroom",
+                            "icon": "🌅"
+                        },
+                        {
+                            "name": "Adobe Premiere",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Fotografía de Producto",
+                            "icon": "📸"
+                        },
+                        {
+                            "name": "Nano Banana",
+                            "icon": "🍌"
+                        },
+                        {
+                            "name": "Google Mixboard",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Google Analytics",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Google Trends",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Canva",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Notion",
+                            "icon": "📝"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Creatividad",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Pensamiento Innovador",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Mentalidad de Experiencia de Usuario",
+                            "icon": "🌐"
+                        },
+                        {
+                            "name": "Conciencia de Marca",
+                            "icon": "⭐"
+                        },
+                        {
+                            "name": "Planificación Estratégica",
+                            "icon": "🗺️"
+                        },
+                        {
+                            "name": "Pensamiento Crítico",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Resolución de Problemas",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Comunicación Efectiva",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Colaboración en Equipo",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Adaptabilidad",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Analista de Datos",
+                "description": "Especialista en extracción, procesamiento y análisis de grandes volúmenes de datos. Transformo información compleja en conocimientos claros, visualizaciones y reportes que orientan la estrategia y optimizan resultados.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analista manipulando controles complejos y revisando datos impresos.",
+                "highlights": [
+                    "Análisis de Datos",
+                    "SQL Avanzado",
+                    "Visualización de Datos",
+                    "Python",
+                    "Extracción y Limpieza de Datos",
+                    "Descubrimiento de Insights",
+                    "Gestión de Bases de Datos",
+                    "Diseño de Bases de Datos"
+                ],
+                "slug": "data-analyst",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "💾"
+                        },
+                        {
+                            "name": "Excel",
+                            "icon": "📈"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Pandas",
+                            "icon": "🐼"
+                        },
+                        {
+                            "name": "Polars",
+                            "icon": "❄️"
+                        },
+                        {
+                            "name": "NumPy",
+                            "icon": "🔢"
+                        },
+                        {
+                            "name": "Matplotlib",
+                            "icon": "📉"
+                        },
+                        {
+                            "name": "Seaborn",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Streamlit",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "Jupyter Notebook",
+                            "icon": "📓"
+                        },
+                        {
+                            "name": "Requests",
+                            "icon": "📡"
+                        },
+                        {
+                            "name": "BeautifulSoup",
+                            "icon": "🌸"
+                        },
+                        {
+                            "name": "Playwright",
+                            "icon": "🎭"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "OpenCV",
+                            "icon": "📷"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Extracción y Limpieza de Datos",
+                            "icon": "🧹"
+                        },
+                        {
+                            "name": "Descubrimiento de Insights",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Visualización de Datos",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Gestión de Bases de Datos",
+                            "icon": "🔧"
+                        },
+                        {
+                            "name": "Diseño de Bases de Datos",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Visión por Computadora",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Pensamiento Analítico",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Pensamiento Crítico",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Comunicación Efectiva",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Resolución de Problemas",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Colaboración en Equipo",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Adaptabilidad",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Desarrollador de Software",
+                "description": "Diseño e implemento soluciones de software robustas. Transformo requerimientos del negocio en aplicaciones eficientes, gestionando el ciclo completo para optimizar operaciones y maximizar el impacto estratégico.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animación de manos tecleando rápidamente en una interfaz futurista, ejecutando comandos complejos en un sistema avanzado.",
+                "highlights": [
+                    "Desarrollador Full-Stack",
+                    "Optimización de Código",
+                    "Implementación de IA",
+                    "Metodologías Ágiles",
+                    "Soluciones Escalables",
+                    "Enfoque en Seguridad",
+                    "Gestión de Bases de Datos"
+                ],
+                "slug": "software-developer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Java",
+                            "icon": "☕"
+                        },
+                        {
+                            "name": "Rust",
+                            "icon": "🦀"
+                        },
+                        {
+                            "name": "Bash",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Git & GitHub",
+                            "icon": "🐙"
+                        },
+                        {
+                            "name": "Linux",
+                            "icon": "🐧"
+                        },
+                        {
+                            "name": "HTML5",
+                            "icon": "📄"
+                        },
+                        {
+                            "name": "CSS3",
+                            "icon": "🎨"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Django",
+                            "icon": "🦄"
+                        },
+                        {
+                            "name": "Astro",
+                            "icon": "🚀"
+                        },
+                        {
+                            "name": "FastAPI",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Docker",
+                            "icon": "🐳"
+                        },
+                        {
+                            "name": "Podman",
+                            "icon": "🦭"
+                        },
+                        {
+                            "name": "SQLAlchemy",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Pydantic",
+                            "icon": "📐"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Optimización de Código",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "Metodologías Ágiles",
+                            "icon": "🔄"
+                        },
+                        {
+                            "name": "Conciencia de Escalabilidad",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Conciencia de Seguridad",
+                            "icon": "🔒"
+                        },
+                        {
+                            "name": "Implementación de IA",
+                            "icon": "🤖"
+                        },
+                        {
+                            "name": "Orientación a Objetivos",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Colaboración en Equipo",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Resolución de Problemas",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Comunicación Efectiva",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Pensamiento Analítico",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Pensamiento Crítico",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Adaptabilidad",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Fotógrafo",
+                "description": "Cuento historias con luz. Me especializo en capturar momentos genuinos y la esencia de personas o marcas, creando imágenes atemporales donde la técnica se une con la visión.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animación de un fotógrafo profesional manipulando una cámara DSLR mientras captura un paisaje dramático del cielo y las montañas.",
+                "slug": "photographer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                }
+            }
+        ],
+        "projects": [
+            {
+                "title": "Próximamente",
+                "description": "Este proyecto estará disponible pronto. Mantente atento para verlo próximamente.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Proyecto Próximamente",
+                "tags": [
+                    "Próximamente",
+                    "Portafolio",
+                    "Soon"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "pt": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Desenho e desenvolvo soluções unindo criatividade, dados e tecnologia. Meu foco é transformar desafios em estratégias de alto impacto que maximizam resultados.",
+        "aboutMe": "Sou um profissional multidisciplinar apaixonado por conectar criatividade, dados e tecnologia. Meu método integra estratégia publicitária com análise de dados, desenvolvimento de software e narrativa visual por meio da fotografia, criando soluções completas e de alto impacto.",
+        "signature": "Criando o futuro, uma linha de código de cada vez.",
+        "homeDescription": "Portfólio profissional de Erik Ramirez, analista de dados, desenvolvedor de software e especialista em publicidade com paixão por fotografia criativa. Combino dados, código, criatividade e fotografia para criar experiências digitais significativas e visualmente impactantes.",
+        "homeKeywords": "análise de dados, visualização de dados, desenvolvimento de software, desenvolvimento web, publicidade, marketing digital, fotografia, portfólio criativo, análise, frontend, backend, full stack, ciência de dados, visualização, branding, edição de fotos",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Especialista em Publicidade",
+                "description": "Especialista em estratégia de marca e criatividade publicitária. Desenvolvo campanhas de alto impacto que transformam ideias em experiências memoráveis, unindo design, inovação e estratégia.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Animação de anime: Comercial com uma mão segurando um refrigerante.",
+                "highlights": [
+                    "Estrategista de Marca",
+                    "Campanhas de Alto Impacto",
+                    "Design",
+                    "Inovação",
+                    "Estratégia",
+                    "Crescimento Escalável"
+                ],
+                "slug": "advertising-specialist",
+                "education": {
+                    "degrees": [
+                        {
+                            "title": "",
+                            "institution": "",
+                            "year": "",
+                            "description": ""
+                        }
+                    ],
+                    "certifications": [
+                        {
+                            "title": "",
+                            "institution": "",
+                            "year": "",
+                            "url": ""
+                        }
+                    ],
+                    "courses": [
+                        {
+                            "title": "",
+                            "platform": "",
+                            "year": ""
+                        }
+                    ]
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Gestão de Identidade de Marca",
+                            "icon": "🏷️"
+                        },
+                        {
+                            "name": "Estratégia Criativa",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Desenvolvimento de Conceitos",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Design de Campanhas",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Narrativa Visual",
+                            "icon": "📖"
+                        },
+                        {
+                            "name": "Storyboarding",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Moodboarding",
+                            "icon": "🗂️"
+                        },
+                        {
+                            "name": "Estratégia Orientada por Dados",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Análise de Tendências e Benchmarking",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Pesquisa de Público",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Apresentações Profissionais",
+                            "icon": "📁"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Adobe Photoshop",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Adobe Illustrator",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Adobe Lightroom",
+                            "icon": "🌅"
+                        },
+                        {
+                            "name": "Adobe Premiere",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Fotografia de Produto",
+                            "icon": "📸"
+                        },
+                        {
+                            "name": "Nano Banana",
+                            "icon": "🍌"
+                        },
+                        {
+                            "name": "Google Mixboard",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Google Analytics",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Google Trends",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Canva",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Notion",
+                            "icon": "📝"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Criatividade",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Pensamento Inovador",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Mentalidade de Experiência do Usuário",
+                            "icon": "🌐"
+                        },
+                        {
+                            "name": "Consciência de Marca",
+                            "icon": "⭐"
+                        },
+                        {
+                            "name": "Planejamento Estratégico",
+                            "icon": "🗺️"
+                        },
+                        {
+                            "name": "Pensamento Crítico",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Resolução de Problemas",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Comunicação Eficaz",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Trabalho em Equipe",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Adaptabilidade",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Analista de Dados",
+                "description": "Especialista em extração, processamento e análise de grandes volumes de dados. Transformo informações complexas em insights claros, visualizações e relatórios que orientam estratégias e otimizam resultados.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analista manipulando controles complexos e revisando dados impressos.",
+                "highlights": [
+                    "Análise de Dados",
+                    "SQL Avançado",
+                    "Visualização de Dados",
+                    "Python",
+                    "Extração e Limpeza de Dados",
+                    "Descoberta de Insights",
+                    "Gestão de Banco de Dados",
+                    "Modelagem de Banco de Dados"
+                ],
+                "slug": "data-analyst",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "💾"
+                        },
+                        {
+                            "name": "Excel",
+                            "icon": "📈"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Pandas",
+                            "icon": "🐼"
+                        },
+                        {
+                            "name": "Polars",
+                            "icon": "❄️"
+                        },
+                        {
+                            "name": "NumPy",
+                            "icon": "🔢"
+                        },
+                        {
+                            "name": "Matplotlib",
+                            "icon": "📉"
+                        },
+                        {
+                            "name": "Seaborn",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Streamlit",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "Jupyter Notebook",
+                            "icon": "📓"
+                        },
+                        {
+                            "name": "Requests",
+                            "icon": "📡"
+                        },
+                        {
+                            "name": "BeautifulSoup",
+                            "icon": "🌸"
+                        },
+                        {
+                            "name": "Playwright",
+                            "icon": "🎭"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "OpenCV",
+                            "icon": "📷"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Extração e Limpeza de Dados",
+                            "icon": "🧹"
+                        },
+                        {
+                            "name": "Descoberta de Insights",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Visualização de Dados",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Gestão de Banco de Dados",
+                            "icon": "🔧"
+                        },
+                        {
+                            "name": "Modelagem de Banco de Dados",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Visão Computacional",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Pensamento Analítico",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Pensamento Crítico",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Comunicação Eficaz",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Resolução de Problemas",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Trabalho em Equipe",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Adaptabilidade",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Desenvolvedor de Software",
+                "description": "Desenho e implemento soluções de software robustas. Transformo requisitos de negócios em aplicações eficientes, gerenciando todo o ciclo para otimizar operações e maximizar o impacto estratégico.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animação de mãos digitando rapidamente em uma interface futurista, executando comandos complexos em um sistema avançado.",
+                "highlights": [
+                    "Desenvolvedor Full-Stack",
+                    "Otimização de Código",
+                    "Implementação de IA",
+                    "Metodologias Ágeis",
+                    "Soluções Escaláveis",
+                    "Foco em Segurança",
+                    "Gestão de Banco de Dados"
+                ],
+                "slug": "software-developer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Java",
+                            "icon": "☕"
+                        },
+                        {
+                            "name": "Rust",
+                            "icon": "🦀"
+                        },
+                        {
+                            "name": "Bash",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Git & GitHub",
+                            "icon": "🐙"
+                        },
+                        {
+                            "name": "Linux",
+                            "icon": "🐧"
+                        },
+                        {
+                            "name": "HTML5",
+                            "icon": "📄"
+                        },
+                        {
+                            "name": "CSS3",
+                            "icon": "🎨"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Django",
+                            "icon": "🦄"
+                        },
+                        {
+                            "name": "Astro",
+                            "icon": "🚀"
+                        },
+                        {
+                            "name": "FastAPI",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Docker",
+                            "icon": "🐳"
+                        },
+                        {
+                            "name": "Podman",
+                            "icon": "🦭"
+                        },
+                        {
+                            "name": "SQLAlchemy",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Pydantic",
+                            "icon": "📐"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Otimização de Código",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "Metodologias Ágeis",
+                            "icon": "🔄"
+                        },
+                        {
+                            "name": "Consciência de Escalabilidade",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Consciência de Segurança",
+                            "icon": "🔒"
+                        },
+                        {
+                            "name": "Implementação de IA",
+                            "icon": "🤖"
+                        },
+                        {
+                            "name": "Orientação a Objetivos",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Trabalho em Equipe",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Resolução de Problemas",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Comunicação Eficaz",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Pensamento Analítico",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Pensamento Crítico",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Adaptabilidade",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Fotógrafo",
+                "description": "Conto histórias com luz. Especializo-me em capturar momentos genuínos e a essência de pessoas e marcas, criando imagens atemporais onde técnica e visão se encontram.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animação de um fotógrafo profissional manipulando uma câmera DSLR e capturando uma paisagem dramática de céu e montanhas.",
+                "slug": "photographer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                }
+            }
+        ],
+        "projects": [
+            {
+                "title": "Em Breve",
+                "description": "Este projeto estará disponível em breve. Fique atento para vê-lo em breve.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Projeto Em Breve",
+                "tags": [
+                    "Em Breve",
+                    "Portfólio",
+                    "Soon"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "fr": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Je conçois et développe des solutions en alliant créativité, données et technologie. Mon objectif est de transformer les défis en stratégies à fort impact qui maximisent les résultats.",
+        "aboutMe": "Je suis un professionnel multidisciplinaire passionné par la connexion entre créativité, données et technologie. Ma méthode combine stratégie publicitaire, analyse de données, développement logiciel et narration visuelle à travers la photographie pour créer des solutions complètes et percutantes.",
+        "signature": "Créer l’avenir, une ligne de code à la fois.",
+        "homeDescription": "Portfolio professionnel d’Erik Ramirez, analyste de données, développeur logiciel et spécialiste en publicité passionné de photographie créative. Je combine données, code, créativité et photographie pour concevoir des expériences numériques significatives et visuellement marquantes.",
+        "homeKeywords": "analyse de données, visualisation de données, développement logiciel, développement web, publicité, marketing digital, photographie, portfolio créatif, analyse, frontend, backend, full stack, science des données, visualisation, branding, retouche photo",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Spécialiste en Publicité",
+                "description": "Spécialiste en stratégie de marque et créativité publicitaire. Je conçois des campagnes à fort impact qui transforment les idées en expériences mémorables, alliant design, innovation et stratégie.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Animation d’un spot publicitaire d’anime avec une main tenant une boisson gazeuse.",
+                "highlights": [
+                    "Stratégie de Marque",
+                    "Campagnes à Fort Impact",
+                    "Design",
+                    "Innovation",
+                    "Stratégie",
+                    "Croissance Durable"
+                ],
+                "slug": "advertising-specialist",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": [
+                        {
+                            "title": "",
+                            "platform": "",
+                            "year": ""
+                        }
+                    ]
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Gestion de l'Identité de Marque",
+                            "icon": "🏷️"
+                        },
+                        {
+                            "name": "Stratégie Créative",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Développement de Concepts",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Conception de Campagnes",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Narration Visuelle",
+                            "icon": "📖"
+                        },
+                        {
+                            "name": "Storyboarding",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Moodboarding",
+                            "icon": "🗂️"
+                        },
+                        {
+                            "name": "Stratégie Basée sur les Données",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Analyse des Tendances et Benchmarking",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Recherche d'Audience",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Présentations Professionnelles",
+                            "icon": "📁"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Adobe Photoshop",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Adobe Illustrator",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Adobe Lightroom",
+                            "icon": "🌅"
+                        },
+                        {
+                            "name": "Adobe Premiere",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Photographie de Produit",
+                            "icon": "📸"
+                        },
+                        {
+                            "name": "Nano Banana",
+                            "icon": "🍌"
+                        },
+                        {
+                            "name": "Google Mixboard",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Google Analytics",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Google Trends",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Canva",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Notion",
+                            "icon": "📝"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Créativité",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Pensée Innovante",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Mentalité Expérience Utilisateur",
+                            "icon": "🌐"
+                        },
+                        {
+                            "name": "Notoriété de la Marque",
+                            "icon": "⭐"
+                        },
+                        {
+                            "name": "Planification Stratégique",
+                            "icon": "🗺️"
+                        },
+                        {
+                            "name": "Pensée Critique",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Résolution de Problèmes",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Communication Efficace",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Travail d’Équipe",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Adaptabilité",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Analyste de Données",
+                "description": "Spécialiste de l’extraction, du traitement et de l’analyse de grandes quantités de données. Je transforme les informations complexes en insights clairs et visuels pour orienter les stratégies et optimiser les performances.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analyste manipulant des commandes complexes et examinant des données imprimées.",
+                "highlights": [
+                    "Analyse de Données",
+                    "SQL Avancé",
+                    "Visualisation de Données",
+                    "Python",
+                    "Extraction et Nettoyage des Données",
+                    "Découverte d’Insights",
+                    "Gestion de Base de Données",
+                    "Modélisation de Données"
+                ],
+                "slug": "data-analyst",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "💾"
+                        },
+                        {
+                            "name": "Excel",
+                            "icon": "📈"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Pandas",
+                            "icon": "🐼"
+                        },
+                        {
+                            "name": "Polars",
+                            "icon": "❄️"
+                        },
+                        {
+                            "name": "NumPy",
+                            "icon": "🔢"
+                        },
+                        {
+                            "name": "Matplotlib",
+                            "icon": "📉"
+                        },
+                        {
+                            "name": "Seaborn",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Streamlit",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "Jupyter Notebook",
+                            "icon": "📓"
+                        },
+                        {
+                            "name": "Requests",
+                            "icon": "📡"
+                        },
+                        {
+                            "name": "BeautifulSoup",
+                            "icon": "🌸"
+                        },
+                        {
+                            "name": "Playwright",
+                            "icon": "🎭"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "OpenCV",
+                            "icon": "📷"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Extraction et Nettoyage de Données",
+                            "icon": "🧹"
+                        },
+                        {
+                            "name": "Découverte d’Insights",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Visualisation de Données",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Gestion de Bases de Données",
+                            "icon": "🔧"
+                        },
+                        {
+                            "name": "Modélisation de Données",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Vision par Ordinateur",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Pensée Analytique",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Pensée Critique",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Communication Efficace",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Résolution de Problèmes",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Travail d’Équipe",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Adaptabilité",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Développeur Logiciel",
+                "description": "Je conçois et mets en œuvre des solutions logicielles robustes. Je transforme les besoins métier en applications performantes, en gérant tout le cycle de développement pour maximiser l’impact stratégique.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animation de mains tapant rapidement sur une interface futuriste, exécutant des commandes complexes dans un système avancé.",
+                "highlights": [
+                    "Développeur Full-Stack",
+                    "Optimisation du Code",
+                    "Implémentation d’IA",
+                    "Méthodologies Agiles",
+                    "Solutions Évolutives",
+                    "Focalisation sur la Sécurité",
+                    "Gestion de Bases de Données"
+                ],
+                "slug": "software-developer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Java",
+                            "icon": "☕"
+                        },
+                        {
+                            "name": "Rust",
+                            "icon": "🦀"
+                        },
+                        {
+                            "name": "Bash",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Git & GitHub",
+                            "icon": "🐙"
+                        },
+                        {
+                            "name": "Linux",
+                            "icon": "🐧"
+                        },
+                        {
+                            "name": "HTML5",
+                            "icon": "📄"
+                        },
+                        {
+                            "name": "CSS3",
+                            "icon": "🎨"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Django",
+                            "icon": "🦄"
+                        },
+                        {
+                            "name": "Astro",
+                            "icon": "🚀"
+                        },
+                        {
+                            "name": "FastAPI",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Docker",
+                            "icon": "🐳"
+                        },
+                        {
+                            "name": "Podman",
+                            "icon": "🦭"
+                        },
+                        {
+                            "name": "SQLAlchemy",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Pydantic",
+                            "icon": "📐"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Optimisation du Code",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "Méthodologies Agiles",
+                            "icon": "🔄"
+                        },
+                        {
+                            "name": "Sensibilisation à l’Évolutivité",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Sensibilisation à la Sécurité",
+                            "icon": "🔒"
+                        },
+                        {
+                            "name": "Implémentation d’IA",
+                            "icon": "🤖"
+                        },
+                        {
+                            "name": "Orientation Objectifs",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Travail d’Équipe",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Résolution de Problèmes",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Communication Efficace",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Pensée Analytique",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Pensée Critique",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Adaptabilité",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Photographe",
+                "description": "Je raconte des histoires avec la lumière. Je capture des moments authentiques et l’essence des personnes et des marques, créant des images intemporelles où la technique rencontre la vision.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animation d’un photographe professionnel manipulant un appareil photo DSLR et capturant un paysage dramatique.",
+                "slug": "photographer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                }
+            }
+        ],
+        "projects": [
+            {
+                "title": "Bientôt Disponible",
+                "description": "Ce projet sera bientôt disponible. Restez à l’écoute pour le découvrir prochainement.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Projet Bientôt Disponible",
+                "tags": [
+                    "Bientôt",
+                    "Portfolio",
+                    "Prochainement"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "ru": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Я создаю и разрабатываю решения, объединяя креативность, данные и технологии. Моя цель — превращать задачи в стратегии с высоким воздействием, которые приносят реальные результаты.",
+        "aboutMe": "Я мультидисциплинарный специалист, увлечённый соединением креативности, данных и технологий. Мой подход объединяет рекламную стратегию, анализ данных, разработку программного обеспечения и визуальное повествование через фотографию для создания целостных и эффективных решений.",
+        "signature": "Создаю будущее, строка за строкой кода.",
+        "homeDescription": "Профессиональное портфолио Эрика Рамиреса — аналитика данных, разработчика программного обеспечения и специалиста по рекламе, увлечённого творческой фотографией. Я объединяю данные, код, креатив и фотографию, чтобы создавать значимые и визуально впечатляющие цифровые проекты.",
+        "homeKeywords": "анализ данных, визуализация данных, разработка программного обеспечения, веб-разработка, реклама, цифровой маркетинг, фотография, креативное портфолио, аналитика, фронтенд, бэкенд, фуллстек, наука о данных, брендинг, редактирование фото",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Специалист по рекламе",
+                "description": "Эксперт по брендингу и рекламным стратегиям. Я создаю кампании с высоким эффектом, превращая идеи в запоминающиеся впечатления, сочетая дизайн, инновации и стратегию.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Аниме-реклама: рука держит газированный напиток.",
+                "highlights": [
+                    "Бренд-стратегия",
+                    "Кампании с высоким воздействием",
+                    "Дизайн",
+                    "Инновации",
+                    "Стратегия",
+                    "Рост и масштабирование"
+                ],
+                "slug": "advertising-specialist",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": [
+                        {
+                            "title": "",
+                            "platform": "",
+                            "year": ""
+                        }
+                    ]
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Управление идентичностью бренда",
+                            "icon": "🏷️"
+                        },
+                        {
+                            "name": "Креативная стратегия",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Разработка концепций",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Дизайн кампаний",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Визуальное повествование",
+                            "icon": "📖"
+                        },
+                        {
+                            "name": "Раскадровка",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Мудбординг",
+                            "icon": "🗂️"
+                        },
+                        {
+                            "name": "Стратегия на основе данных",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Анализ трендов и бенчмаркинг",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Исследование аудитории",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Профессиональные презентации",
+                            "icon": "📁"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Adobe Photoshop",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Adobe Illustrator",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Adobe Lightroom",
+                            "icon": "🌅"
+                        },
+                        {
+                            "name": "Adobe Premiere",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Продуктовая фотография",
+                            "icon": "📸"
+                        },
+                        {
+                            "name": "Nano Banana",
+                            "icon": "🍌"
+                        },
+                        {
+                            "name": "Google Mixboard",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Google Analytics",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Google Trends",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Canva",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Notion",
+                            "icon": "📝"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Креативность",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Инновационное мышление",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Ориентация на пользовательский опыт",
+                            "icon": "🌐"
+                        },
+                        {
+                            "name": "Узнаваемость бренда",
+                            "icon": "⭐"
+                        },
+                        {
+                            "name": "Стратегическое планирование",
+                            "icon": "🗺️"
+                        },
+                        {
+                            "name": "Критическое мышление",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Решение проблем",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Эффективная коммуникация",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Работа в команде",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Адаптивность",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Аналитик данных",
+                "description": "Специалист по извлечению, обработке и анализу больших объёмов данных. Я превращаю сложные данные в понятные визуализации и отчёты, помогая принимать стратегические решения и повышать эффективность.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Аналитик работает с панелью управления и анализирует напечатанные данные.",
+                "highlights": [
+                    "Анализ данных",
+                    "Продвинутый SQL",
+                    "Визуализация данных",
+                    "Python",
+                    "Извлечение и очистка данных",
+                    "Поиск инсайтов",
+                    "Управление базами данных",
+                    "Проектирование баз данных"
+                ],
+                "slug": "data-analyst",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "💾"
+                        },
+                        {
+                            "name": "Excel",
+                            "icon": "📈"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Pandas",
+                            "icon": "🐼"
+                        },
+                        {
+                            "name": "Polars",
+                            "icon": "❄️"
+                        },
+                        {
+                            "name": "NumPy",
+                            "icon": "🔢"
+                        },
+                        {
+                            "name": "Matplotlib",
+                            "icon": "📉"
+                        },
+                        {
+                            "name": "Seaborn",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Streamlit",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "Jupyter Notebook",
+                            "icon": "📓"
+                        },
+                        {
+                            "name": "Requests",
+                            "icon": "📡"
+                        },
+                        {
+                            "name": "BeautifulSoup",
+                            "icon": "🌸"
+                        },
+                        {
+                            "name": "Playwright",
+                            "icon": "🎭"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "OpenCV",
+                            "icon": "📷"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Извлечение и очистка данных",
+                            "icon": "🧹"
+                        },
+                        {
+                            "name": "Поиск инсайтов",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Визуализация данных",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Управление базами данных",
+                            "icon": "🔧"
+                        },
+                        {
+                            "name": "Проектирование баз данных",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Компьютерное зрение",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Аналитическое мышление",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Критическое мышление",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Эффективная коммуникация",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Решение проблем",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Командная работа",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Адаптивность",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Разработчик программного обеспечения",
+                "description": "Я проектирую и внедряю надёжные программные решения. Превращаю бизнес-требования в эффективные приложения, управляя всем циклом разработки для достижения стратегического эффекта.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Анимация: руки быстро набирают команды на футуристической панели управления, выполняя сложные команды в передовой системе.",
+                "highlights": [
+                    "Full-Stack разработчик",
+                    "Оптимизация кода",
+                    "Внедрение ИИ",
+                    "Гибкие методологии",
+                    "Масштабируемые решения",
+                    "Фокус на безопасности",
+                    "Управление базами данных"
+                ],
+                "slug": "software-developer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Java",
+                            "icon": "☕"
+                        },
+                        {
+                            "name": "Rust",
+                            "icon": "🦀"
+                        },
+                        {
+                            "name": "Bash",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Git & GitHub",
+                            "icon": "🐙"
+                        },
+                        {
+                            "name": "Linux",
+                            "icon": "🐧"
+                        },
+                        {
+                            "name": "HTML5",
+                            "icon": "📄"
+                        },
+                        {
+                            "name": "CSS3",
+                            "icon": "🎨"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Django",
+                            "icon": "🦄"
+                        },
+                        {
+                            "name": "Astro",
+                            "icon": "🚀"
+                        },
+                        {
+                            "name": "FastAPI",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Docker",
+                            "icon": "🐳"
+                        },
+                        {
+                            "name": "Podman",
+                            "icon": "🦭"
+                        },
+                        {
+                            "name": "SQLAlchemy",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Pydantic",
+                            "icon": "📐"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Оптимизация кода",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "Гибкие методологии",
+                            "icon": "🔄"
+                        },
+                        {
+                            "name": "Понимание масштабируемости",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Осведомленность о безопасности",
+                            "icon": "🔒"
+                        },
+                        {
+                            "name": "Внедрение ИИ",
+                            "icon": "🤖"
+                        },
+                        {
+                            "name": "Ориентация на результат",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Командная работа",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Решение проблем",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Эффективная коммуникация",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Аналитическое мышление",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Критическое мышление",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Адаптивность",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Фотограф",
+                "description": "Я рассказываю истории с помощью света. Специализируюсь на съёмке искренних моментов и создании образов, отражающих суть людей и брендов — там, где техника встречается с видением.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Анимация: профессиональный фотограф с камерой DSLR снимает пейзаж.",
+                "slug": "photographer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                }
+            }
+        ],
+        "projects": [
+            {
+                "title": "Скоро появится",
+                "description": "Этот проект скоро будет доступен. Следите за обновлениями, чтобы увидеть его первыми.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Проект скоро появится",
+                "tags": [
+                    "Скоро",
+                    "Портфолио",
+                    "В разработке"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    },
+    "de": {
+        "fullname": "Erik Ramirez",
+        "username": "@xerikrz",
+        "biography": "Ich entwerfe und entwickle Lösungen, indem ich Kreativität, Daten und Technologie vereine. Mein Ziel ist es, Herausforderungen in wirkungsvolle Strategien zu verwandeln, die messbare Ergebnisse liefern.",
+        "aboutMe": "Ich bin ein multidisziplinärer Profi mit einer Leidenschaft dafür, Kreativität, Daten und Technologie zu verbinden. Mein Ansatz kombiniert Werbestrategie mit Datenanalyse, Softwareentwicklung und visueller Erzählkunst durch Fotografie, um ganzheitliche, wirkungsvolle Lösungen zu schaffen.",
+        "signature": "Die Zukunft gestalten – eine Codezeile nach der anderen.",
+        "homeDescription": "Professionelles Portfolio von Erik Ramirez – Datenanalyst, Softwareentwickler und Werbespezialist mit Leidenschaft für kreative Fotografie. Ich kombiniere Daten, Code, Kreativität und Fotografie, um bedeutungsvolle und visuell beeindruckende digitale Erlebnisse zu schaffen.",
+        "homeKeywords": "Datenanalyse, Datenvisualisierung, Softwareentwicklung, Webentwicklung, Werbung, digitales Marketing, Fotografie, kreatives Portfolio, Analytik, Frontend, Backend, Full Stack, Data Science, Visualisierung, Branding, Bildbearbeitung",
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/xerikrz"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/xerikrz"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com/xerikrz"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/xerikrz"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Werbespezialist",
+                "description": "Experte für Markenstrategie und kreative Werbung. Ich entwickle wirkungsvolle Kampagnen, die Ideen in unvergessliche Erlebnisse verwandeln – durch die Verbindung von Design, Innovation und Strategie.",
+                "img": "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2020/02/anime-soft-drink.gif",
+                "alt": "Anime-Werbung: Eine Hand hält ein Erfrischungsgetränk.",
+                "highlights": [
+                    "Markenstrategie",
+                    "Wirkungsvolle Kampagnen",
+                    "Design",
+                    "Innovation",
+                    "Strategie",
+                    "Skalierbares Wachstum"
+                ],
+                "slug": "advertising-specialist",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": [
+                        {
+                            "title": "",
+                            "platform": "",
+                            "year": ""
+                        }
+                    ]
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Markenidentitätsmanagement",
+                            "icon": "🏷️"
+                        },
+                        {
+                            "name": "Kreativstrategie",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Konzeptentwicklung",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Kampagnendesign",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Visuelles Storytelling",
+                            "icon": "📖"
+                        },
+                        {
+                            "name": "Storyboarding",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Moodboarding",
+                            "icon": "🗂️"
+                        },
+                        {
+                            "name": "Datengesteuerte Strategie",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Trendanalyse & Benchmarking",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Zielgruppenforschung",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Professionelle Präsentationen",
+                            "icon": "📁"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Adobe Photoshop",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Adobe Illustrator",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Adobe Lightroom",
+                            "icon": "🌅"
+                        },
+                        {
+                            "name": "Adobe Premiere",
+                            "icon": "🎬"
+                        },
+                        {
+                            "name": "Produktfotografie",
+                            "icon": "📸"
+                        },
+                        {
+                            "name": "Nano Banana",
+                            "icon": "🍌"
+                        },
+                        {
+                            "name": "Google Mixboard",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Google Analytics",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Google Trends",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Canva",
+                            "icon": "🖌️"
+                        },
+                        {
+                            "name": "Notion",
+                            "icon": "📝"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Kreativität",
+                            "icon": "🎨"
+                        },
+                        {
+                            "name": "Innovatives Denken",
+                            "icon": "💡"
+                        },
+                        {
+                            "name": "Benutzererlebnis-Denkweise",
+                            "icon": "🌐"
+                        },
+                        {
+                            "name": "Markenbewusstsein",
+                            "icon": "⭐"
+                        },
+                        {
+                            "name": "Strategische Planung",
+                            "icon": "🗺️"
+                        },
+                        {
+                            "name": "Kritisches Denken",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Problemlösung",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Effektive Kommunikation",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Teamarbeit",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Anpassungsfähigkeit",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Datenanalyst",
+                "description": "Spezialist für die Extraktion, Verarbeitung und Analyse großer Datenmengen. Ich verwandle komplexe Erkenntnisse in klare Einsichten, Visualisierungen und Berichte, um Strategien zu leiten und Ergebnisse zu optimieren.",
+                "img": "https://i.pinimg.com/originals/9f/f6/85/9ff6850d7d42d79f7bae79c89eac4d5c.gif",
+                "alt": "Analyst bedient komplexe Systeme und überprüft gedruckte Datenberichte.",
+                "highlights": [
+                    "Datenanalyse",
+                    "Fortgeschrittenes SQL",
+                    "Datenvisualisierung",
+                    "Python",
+                    "Datenextraktion & Bereinigung",
+                    "Erkenntnisgewinnung",
+                    "Datenbankmanagement",
+                    "Datenbankdesign"
+                ],
+                "slug": "data-analyst",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "💾"
+                        },
+                        {
+                            "name": "Excel",
+                            "icon": "📈"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Pandas",
+                            "icon": "🐼"
+                        },
+                        {
+                            "name": "Polars",
+                            "icon": "❄️"
+                        },
+                        {
+                            "name": "NumPy",
+                            "icon": "🔢"
+                        },
+                        {
+                            "name": "Matplotlib",
+                            "icon": "📉"
+                        },
+                        {
+                            "name": "Seaborn",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Streamlit",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "Jupyter Notebook",
+                            "icon": "📓"
+                        },
+                        {
+                            "name": "Requests",
+                            "icon": "📡"
+                        },
+                        {
+                            "name": "BeautifulSoup",
+                            "icon": "🌸"
+                        },
+                        {
+                            "name": "Playwright",
+                            "icon": "🎭"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "OpenCV",
+                            "icon": "📷"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Datenextraktion & Bereinigung",
+                            "icon": "🧹"
+                        },
+                        {
+                            "name": "Erkenntnisgewinnung",
+                            "icon": "🔍"
+                        },
+                        {
+                            "name": "Datenvisualisierung",
+                            "icon": "📊"
+                        },
+                        {
+                            "name": "Datenbankmanagement",
+                            "icon": "🔧"
+                        },
+                        {
+                            "name": "Datenbankdesign",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Computer Vision",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "Analytisches Denken",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Kritisches Denken",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Effektive Kommunikation",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Problemlösung",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Teamarbeit",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Anpassungsfähigkeit",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Softwareentwickler",
+                "description": "Ich entwerfe und implementiere robuste Softwarelösungen. Ich verwandle Geschäftsanforderungen in effiziente Anwendungen und manage den gesamten Entwicklungszyklus, um strategische Wirkung zu erzielen.",
+                "img": "https://i.giphy.com/fsoCk5kgOcYMM.webp",
+                "alt": "Animation von Händen, die schnell auf einer futuristischen Oberfläche tippen und komplexe Befehle in einem fortschrittlichen System ausführen.",
+                "highlights": [
+                    "Full-Stack-Entwickler",
+                    "Code-Optimierung",
+                    "KI-Implementierung",
+                    "Agile Methoden",
+                    "Skalierbare Lösungen",
+                    "Sicherheitsfokus",
+                    "Datenbankmanagement"
+                ],
+                "slug": "software-developer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                },
+                "skills": {
+                    "technicalSkills": [
+                        {
+                            "name": "Python",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Java",
+                            "icon": "☕"
+                        },
+                        {
+                            "name": "Rust",
+                            "icon": "🦀"
+                        },
+                        {
+                            "name": "Bash",
+                            "icon": "💻"
+                        },
+                        {
+                            "name": "PostgreSQL",
+                            "icon": "🐘"
+                        },
+                        {
+                            "name": "MariaDB",
+                            "icon": "🌊"
+                        },
+                        {
+                            "name": "SQLite",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Git & GitHub",
+                            "icon": "🐙"
+                        },
+                        {
+                            "name": "Linux",
+                            "icon": "🐧"
+                        },
+                        {
+                            "name": "HTML5",
+                            "icon": "📄"
+                        },
+                        {
+                            "name": "CSS3",
+                            "icon": "🎨"
+                        }
+                    ],
+                    "toolsSkills": [
+                        {
+                            "name": "Django",
+                            "icon": "🦄"
+                        },
+                        {
+                            "name": "Astro",
+                            "icon": "🚀"
+                        },
+                        {
+                            "name": "FastAPI",
+                            "icon": "⚡"
+                        },
+                        {
+                            "name": "Docker",
+                            "icon": "🐳"
+                        },
+                        {
+                            "name": "Podman",
+                            "icon": "🦭"
+                        },
+                        {
+                            "name": "SQLAlchemy",
+                            "icon": "🗄️"
+                        },
+                        {
+                            "name": "Pydantic",
+                            "icon": "📐"
+                        },
+                        {
+                            "name": "Selenium",
+                            "icon": "⚙️"
+                        }
+                    ],
+                    "softSkills": [
+                        {
+                            "name": "Code-Optimierung",
+                            "icon": "⚙️"
+                        },
+                        {
+                            "name": "Agile Methoden",
+                            "icon": "🔄"
+                        },
+                        {
+                            "name": "Skalierbarkeitsbewusstsein",
+                            "icon": "📈"
+                        },
+                        {
+                            "name": "Sicherheitsbewusstsein",
+                            "icon": "🔒"
+                        },
+                        {
+                            "name": "KI-Implementierung",
+                            "icon": "🤖"
+                        },
+                        {
+                            "name": "Zielorientierung",
+                            "icon": "🎯"
+                        },
+                        {
+                            "name": "Teamarbeit",
+                            "icon": "🤝"
+                        },
+                        {
+                            "name": "Problemlösung",
+                            "icon": "🧩"
+                        },
+                        {
+                            "name": "Effektive Kommunikation",
+                            "icon": "💬"
+                        },
+                        {
+                            "name": "Analytisches Denken",
+                            "icon": "🧠"
+                        },
+                        {
+                            "name": "Kritisches Denken",
+                            "icon": "🧐"
+                        },
+                        {
+                            "name": "Anpassungsfähigkeit",
+                            "icon": "♻️"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Fotograf",
+                "description": "Ich erzähle Geschichten mit Licht. Ich spezialisiere mich darauf, authentische Momente und die Essenz von Menschen und Marken einzufangen – Bilder, in denen Technik und Vision aufeinandertreffen.",
+                "img": "https://i.pinimg.com/originals/aa/29/c8/aa29c87da305509a8a4aa38ad45fe508.gif",
+                "alt": "Animation eines Fotografen, der eine DSLR-Kamera bedient und eine Landschaft aufnimmt.",
+                "slug": "photographer",
+                "education": {
+                    "degrees": [],
+                    "certifications": [],
+                    "courses": []
+                }
+            }
+        ],
+        "projects": [
+            {
+                "title": "Demnächst verfügbar",
+                "description": "Dieses Projekt wird bald verfügbar sein. Bleiben Sie dran, um es bald zu entdecken.",
+                "img": "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp",
+                "alt": "Projekt – Demnächst verfügbar",
+                "tags": [
+                    "Bald verfügbar",
+                    "Portfolio",
+                    "In Kürze"
+                ],
+                "link": "#",
+                "repository": "",
+                "role": ""
+            }
+        ]
+    }
+}

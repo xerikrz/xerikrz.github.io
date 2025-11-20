@@ -1,0 +1,209 @@
+---
+import { useTranslations } from "../i18n/utils.ts";
+import { languagesList, defaultLang } from "../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+const imageDefault = "https://i.giphy.com/3oEjI6SIIHBdRxXI40.webp";
+
+interface Role {
+    title: string;
+    description: string;
+    img: string;
+    alt: string;
+    slug: string;
+}
+
+interface Props {
+    aboutMe: string;
+    roles: Role[];
+}
+
+const {
+    aboutMe = "Your about me summary goes here. This is a brief introduction about yourself, your skills, and your passions.",
+    roles = [
+        {
+            title: "Role 1",
+            description:
+                "Description for role. This role involves various tasks and responsibilities that showcase my skills.",
+            img: imageDefault,
+            alt: "Role Image",
+            slug: "#",
+        },
+        {
+            title: "Role 2",
+            description:
+                "Description for role. This role involves various tasks and responsibilities that showcase my skills.",
+            img: imageDefault,
+            alt: "Role Image",
+            slug: "#",
+        },
+    ],
+} = Astro.props as Props;
+---
+
+<section id="about">
+    <div class="container">
+        <h2 id="about-title" class="section-title">
+            {t("about.section.title")}
+        </h2>
+        <div class="about-summary">
+            <p>{aboutMe}</p>
+        </div>
+        <div class="about-grid">
+            {
+                roles.map((role) => (
+                    <div class="about-item">
+                        <div class="about-item-img">
+                            <img src={role.img} alt={role.alt} />
+                        </div>
+                        <div class="about-item-info">
+                            <h3>{role.title}</h3>
+                            <p>{role.description}</p>
+                            <a href={role.slug} class="btn">
+                                {t("about.text.button")}
+                            </a>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-summary {
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        text-align: center;
+        color: var(--color-light);
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #about .container {
+        padding: 0.5rem 1rem;
+    }
+
+    .about-item {
+        display: flex;
+        flex-direction: column;
+        background: var(--color-gray-100);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow-subtle);
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-item-info {
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 1rem;
+    }
+
+    .about-item-img,
+    .about-item-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-item-img {
+        height: 250px;
+        width: 100%;
+    }
+
+    .about-item-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%) contrast(1.2);
+        user-select: none;
+    }
+
+    .about-item:hover .about-item-img img,
+    .about-item:target .about-item-img img {
+        animation: grayscalePulse 3s ease-in-out infinite;
+    }
+
+    .about-item-info h3 {
+        font-family: var(--font-primary);
+        font-size: 1rem;
+        color: var(--color-primary);
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation:
+            metallic-sheen 3s linear infinite,
+            glow-text 3s ease-in-out infinite;
+    }
+
+    .about-item-info {
+        text-align: left;
+    }
+
+    .about-item-info .btn {
+        margin-top: auto;
+        align-self: center;
+    }
+
+    @media (min-width: 768px) {
+        .about-summary {
+            margin-top: 2rem;
+        }
+
+        .about-grid {
+            gap: 4rem;
+        }
+
+        #about .container {
+            padding: 2rem 1rem;
+        }
+
+        .about-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 800px;
+            gap: 0;
+        }
+
+        .about-item:nth-of-type(even) .about-item-img {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .about-item-img {
+            height: 100%;
+            min-height: 250px;
+        }
+
+        .about-item-info .btn {
+            align-self: flex-end;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+        }
+
+        .about-item {
+            max-width: none;
+        }
+    }
+</style>

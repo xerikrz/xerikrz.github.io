@@ -1,0 +1,161 @@
+---
+interface Props {
+    fullname: string;
+    roleTitle: string;
+    username: string;
+    roleDescription: string;
+    roleHighlights: string[];
+}
+
+const {
+    fullname = "Your Fullname",
+    roleTitle = "Professional Role",
+    username = "@username",
+    roleDescription = "Brief description of skills and professional experience in development and interface design.",
+    roleHighlights = ["Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5"],
+} = Astro.props as Props;
+---
+
+<section id="hero-section">
+    <div class="hero-content">
+        <div class="profile-info">
+            <h2 id="profile-title">{fullname}</h2>
+            <h3 class="role-title">{roleTitle}</h3>
+            <p id="username">« {username} »</p>
+            <p id="description">{roleDescription}</p>
+            <p id="skills">
+                {
+                    roleHighlights.map((highlight) => (
+                        <span class="skill-highlight">{highlight}</span>
+                    ))
+                }
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    #hero-section {
+        padding: 4rem 1rem;
+        min-height: 90dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .hero-content {
+        width: 100%;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #profile-title {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        background: linear-gradient(
+            110deg,
+            var(--color-primary) 30%,
+            var(--color-white) 50%,
+            var(--color-primary) 70%
+        );
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation:
+            metallic-sheen 6s linear infinite,
+            glow-text 3s ease-in-out infinite;
+    }
+
+    .role-title {
+        font-family: var(--font-ui);
+        font-size: 1.6rem;
+        color: var(--color-white);
+        margin: 0;
+        font-weight: 500;
+    }
+
+    #username {
+        font-family: var(--font-ui);
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: var(--color-primary);
+        margin: 1rem 0;
+        letter-spacing: 1px;
+        animation: glow-text 3s ease-in-out infinite;
+    }
+
+    #description {
+        margin-top: 2rem 1rem;
+        font-size: 1.1rem;
+        color: var(--color-light);
+        max-width: 600px;
+        opacity: 0.9;
+    }
+
+    #skills {
+        margin: 3rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+        max-width: 100%;
+    }
+
+    .skill-highlight {
+        background-color: rgba(0, 255, 102, 0.05);
+        border: 1px solid var(--color-primary-dark);
+        color: var(--color-primary-light);
+        padding: 0.3rem 0.7rem;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: default;
+    }
+
+    .skill-highlight:hover {
+        transform: scale(1.05);
+        background-color: rgba(0, 255, 102, 0.1);
+        border-color: var(--color-primary-light);
+    }
+
+    @media (min-width: 768px) {
+        #hero-section {
+            padding: 5rem 2rem;
+        }
+        #profile-title {
+            font-size: 3.2rem;
+        }
+        .role-title {
+            font-size: 2rem;
+        }
+        #skills {
+            max-width: 80%;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        #profile-title {
+            font-size: 4rem;
+        }
+        .role-title {
+            font-size: 2.4rem;
+        }
+        #skills {
+            max-width: 60%;
+        }
+        .skill-highlight {
+            padding: 0.4rem 0.8rem;
+        }
+    }
+</style>

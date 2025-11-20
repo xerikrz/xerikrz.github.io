@@ -1,0 +1,54 @@
+---
+import { useTranslations } from "../../i18n/utils.ts";
+import { languagesList, defaultLang } from "../../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+import data from "@data/data.json";
+const userData = data[currentLocale];
+
+import PortfolioLayout from "../../layouts/PortfolioLayout.astro";
+
+const role = userData.roles[0];
+
+const pageTitle = userData.fullname + " | " + role.title;
+const pageDescription = userData.homeDescription;
+const pageKeywords = userData.homeKeywords;
+const fullname = userData.fullname;
+const footerQuote = userData.signature;
+const socials = userData.socials;
+const roleTitle = role.title;
+const username = userData.username;
+const roleDescription = role.description;
+const roleHighlights = role.highlights;
+const degrees = role.education.degrees;
+const certifications = role.education.certifications;
+const courses = role.education.courses;
+const technicalSkills = role.skills.technicalSkills;
+const toolsSkills = role.skills.toolsSkills;
+const softSkills = role.skills.softSkills;
+const projects = userData.projects.filter(
+    (project) => project.role === role.title,
+);
+---
+
+<PortfolioLayout
+    pageTitle={pageTitle}
+    pageDescription={pageDescription}
+    pageKeywords={pageKeywords}
+    fullname={fullname}
+    footerQuote={footerQuote}
+    socials={socials}
+    roleTitle={roleTitle}
+    username={username}
+    roleDescription={roleDescription}
+    roleHighlights={roleHighlights}
+    technicalSkills={technicalSkills}
+    toolsSkills={toolsSkills}
+    softSkills={softSkills}
+    degrees={degrees}
+    certifications={certifications}
+    courses={courses}
+    projects={projects}
+/>

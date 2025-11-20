@@ -1,0 +1,63 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import PortfolioHero from "../components/portfolio/HeroSection.astro";
+import PortfolioFormation from "../components/portfolio/FormationSection.astro";
+import PortfolioSkills from "../components/portfolio/SkillsSection.astro";
+import PortfolioProjects from "../components/portfolio/ProjectsSection.astro";
+import PortfolioContact from "../components/portfolio/ContactSection.astro";
+
+const {
+    pageLanguage,
+    pageTitle,
+    pageDescription,
+    pageKeywords,
+    fullname,
+    username,
+    footerQuote,
+    navigation,
+    socials,
+    roleTitle,
+    roleDescription,
+    roleHighlights,
+    degrees,
+    certifications,
+    courses,
+    technicalSkills,
+    toolsSkills,
+    softSkills,
+    projects,
+} = Astro.props;
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    pageLanguage={pageLanguage}
+    pageTitle={pageTitle}
+    pageDescription={pageDescription}
+    pageKeywords={pageKeywords}
+    fullname={fullname}
+    footerQuote={footerQuote}
+    navigation={navigation}
+    socials={socials}
+>
+    <main>
+        <PortfolioHero
+            fullname={fullname}
+            username={username}
+            roleTitle={roleTitle}
+            username={username}
+            roleDescription={roleDescription}
+            roleHighlights={roleHighlights}
+        />
+        <PortfolioSkills
+            technicalSkills={technicalSkills}
+            toolsSkills={toolsSkills}
+            softSkills={softSkills}
+        />
+        <PortfolioProjects projects={projects} />
+        <PortfolioContact
+            username={username}
+            socials={socials.concat(socials)}
+        />
+    </main>
+</BaseLayout>
