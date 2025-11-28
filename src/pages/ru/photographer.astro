@@ -1,0 +1,65 @@
+---
+import { useTranslations } from "../../i18n/utils.ts";
+import { languagesList, defaultLang } from "../../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+import allPhotosData from "@data/photos.json";
+const photosData = allPhotosData[currentLocale];
+
+import data from "@data/data.json";
+const userData = data[currentLocale];
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PhotographerHero from "../../components/photographer/PhotographerHero.astro";
+import FilterCarousel from "../../components/photographer/FilterCarousel.astro";
+import PhotoGallery from "../../components/photographer/PhotoGallery.astro";
+import CarouselScript from "../../components/photographer/CarouselScript.astro";
+
+const photos = photosData.map((photo) => ({
+    ...photo,
+    tags: photo.tags || [],
+}));
+
+const shuffledPhotos = photos.sort(() => Math.random() - 0.5);
+
+const getRandomTags = (tags, count = 2) => {
+    if (!tags || tags.length === 0) return "";
+    const shuffled = [...tags].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count).join(" / ");
+};
+
+const {
+    pageTitle = userData.fullname + " | " + t("photographer.title"),
+    pageDescription = userData.homeDescription,
+    pageKeywords = userData.homeKeywords,
+    fullname = userData.fullname,
+    username = userData.username,
+    footerQuote = userData.signature,
+    socials = userData.socials,
+} = Astro.props;
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    pageDescription={pageDescription}
+    pageKeywords={pageKeywords}
+    fullname={fullname}
+    footerQuote={footerQuote}
+    socials={socials}
+>
+    <main>
+        <PhotographerHero
+            fullname={fullname}
+            username={username}
+            quote={t("photographer.text.quote")}
+        />
+        <FilterCarousel
+            sectionTitle={t("photographer.section.title")}
+            buttonText={t("photographer.text.button")}
+        />
+        <PhotoGallery photos={shuffledPhotos} />
+        <CarouselScript photos={photos} />
+    </main>
+</BaseLayout>

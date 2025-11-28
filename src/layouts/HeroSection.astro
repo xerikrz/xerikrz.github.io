@@ -1,0 +1,254 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { useTranslations } from "../i18n/utils.ts";
+import { languagesList, defaultLang } from "../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+interface Role {
+    title: string;
+    slug: string;
+}
+
+interface Props {
+    fullname: string;
+    username: string;
+    biography: string;
+    roles: Role[];
+}
+
+const {
+    fullname = "Your Fullname",
+    username = "Your username",
+    biography = "Your biography goes here. Describe yourself in a few sentences.",
+    roles = [
+        { title: "Role 1", slug: "role-1" },
+        { title: "Role 2", slug: "role-2" },
+        { title: "Role 3", slug: "role-3" },
+        { title: "Role 4", slug: "role-4" },
+    ],
+} = Astro.props as Props;
+---
+
+<section id="hero-section">
+    <div class="container hero-content">
+        <div id="profile-image-container">
+            <img
+                src="/placeholder-profile.webp"
+                alt={`${t("hero.alt.profile")} ${fullname}`}
+                id="profile-img"
+            />
+        </div>
+        <div class="profile-info">
+            <h2 id="profile-title">{fullname}</h2>
+            <p id="username">« {username} »</p>
+            <div id="skills">
+                <ul>
+                    {
+                        roles.map((role) => (
+                            <li class="skill-item">
+                                <a
+                                    href={getRelativeLocaleUrl(
+                                        currentLocale,
+                                        role.slug,
+                                    )}
+                                >
+                                    <h3>{role.title}</h3>
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+            <p id="description">{biography}</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    #hero-section {
+        padding: 2rem 0;
+        min-height: 90dvh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    #profile-image-container {
+        width: clamp(200px, 45vw, 300px);
+        height: clamp(200px, 45vw, 300px);
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        animation: glow 3s ease-in-out infinite;
+        flex-shrink: 0;
+    }
+
+    #profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    #profile-title {
+        font-family: var(--font-primary);
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        background: linear-gradient(
+            110deg,
+            var(--color-primary) 30%,
+            var(--color-white) 50%,
+            var(--color-primary) 70%
+        );
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation:
+            metallic-sheen 6s linear infinite,
+            glow-text 3s ease-in-out infinite;
+    }
+
+    #username {
+        font-family: var(--font-ui);
+        font-size: clamp(1.7rem, 4vw, 2rem);
+        background: linear-gradient(
+            110deg,
+            var(--color-primary) 40%,
+            var(--color-white) 50%,
+            var(--color-primary) 60%
+        );
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation:
+            metallic-sheen 6s linear infinite,
+            glow-text 3s ease-in-out infinite;
+        margin-top: 0.5rem;
+        letter-spacing: 1px;
+    }
+
+    #description {
+        font-size: 1rem;
+        color: var(--color-light);
+        margin-top: 1.5rem;
+        max-width: 500px;
+    }
+
+    #skills {
+        max-width: 500px;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    #skills ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .skill-item {
+        font-family: var(--font-ui);
+        background: var(--color-gray-900);
+        color: var(--color-primary-dark);
+        font-weight: 500;
+        padding: 0.2rem 0.6rem;
+        border-radius: 50px;
+        border: 1px solid var(--color-primary);
+        box-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
+        font-size: 0.6rem;
+        transition: all 0.3s ease;
+        text-align: center;
+        animation: glow-border 3s ease-in-out infinite;
+    }
+
+    .skill-item a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+
+    .skill-item:hover {
+        background: var(--gradient-primary);
+        border-color: var(--color-primary-light);
+        box-shadow: 0 4px 15px rgba(0, 255, 102, 0.5);
+        color: var(--color-gray-900);
+        font-weight: bold;
+        transform: translateY(-3px) scale(1.05);
+        animation: none;
+    }
+
+    @media (min-width: 768px) {
+        #hero-section {
+            margin-bottom: 3rem;
+            min-height: 100dvh;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            gap: 5rem;
+        }
+
+        #profile-image-container {
+            width: 320px;
+            height: 320px;
+        }
+
+        #username {
+            margin-top: 0;
+        }
+
+        #skills ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .skill-item {
+            font-size: 0.8rem;
+        }
+
+        #description {
+            text-align: start;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        #profile-image-container {
+            width: 380px;
+            height: 380px;
+        }
+        #profile-title {
+            font-size: 4rem;
+        }
+        #username {
+            font-size: 2.2rem;
+        }
+    }
+
+    @keyframes glow-border {
+        0%,
+        100% {
+            box-shadow: 0 0 10px var(--color-primary);
+        }
+        50% {
+            box-shadow: 0 0 20px var(--color-primary-light);
+        }
+    }
+</style>

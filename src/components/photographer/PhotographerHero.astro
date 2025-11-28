@@ -1,0 +1,184 @@
+---
+import PhotoIcon from "../icons/PhotoIcon.astro";
+
+interface Props {
+    fullname: string;
+    username: string;
+    quote: string;
+}
+
+const { fullname, username, quote } = Astro.props;
+---
+
+<section class="hero">
+    <div class="hero-content" style="text-align: center;">
+        <PhotoIcon class="hero-icon" />
+        <h2 class="hero-name">{fullname}</h2>
+        <a
+            href="https://www.instagram.com/xerikrz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-username">{username}</a
+        >
+        <p class="hero-quote">{quote}</p>
+    </div>
+</section>
+
+<style is:global>
+    .hero {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100dvh;
+        padding: 2rem;
+        color: var(--color-white);
+    }
+
+    @media (min-width: 768px) {
+        .hero {
+            margin-top: -70px;
+            min-height: 100vh;
+            padding-top: calc(70px + 2rem);
+        }
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent),
+            var(
+                --hero-bg-image,
+                url("https://res.cloudinary.com/dhcjs6gks/image/upload/w_50,q_auto,e_blur:1000/v1759538264/88617414_vlboe8.jpg")
+            );
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: ken-burns 30s ease-in-out infinite alternate;
+        z-index: -1;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        animation: fade-in-up 1s 0.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        opacity: 0;
+    }
+
+    .hero-icon {
+        width: clamp(5rem, 15vw, 6rem);
+        height: auto;
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+        filter: drop-shadow(0 0 12px var(--color-primary));
+    }
+
+    .hero-name {
+        font-family: var(--font-display);
+        font-size: clamp(2.2rem, 6vw, 3.5rem);
+        line-height: 1.1;
+        margin: 0 0 0.5rem 0;
+        color: var(--color-white);
+        background: linear-gradient(90deg, #ccc, white, #ccc);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: metallic-sheen 6s linear infinite;
+    }
+
+    .hero-username {
+        display: inline-block;
+        font-family: var(--font-ui);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        color: var(--color-primary-light);
+        background: linear-gradient(
+            90deg,
+            var(--color-primary-light),
+            white,
+            var(--color-primary-light)
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+        margin-bottom: 1.5rem;
+        animation:
+            metallic-sheen 4s linear infinite,
+            glow-text 3s ease-in-out infinite;
+    }
+
+    .hero-username:hover {
+        color: var(--color-primary);
+    }
+
+    .hero-quote {
+        font-size: clamp(1.1rem, 3vw, 1.25rem);
+        font-family: var(--font-secondary);
+        line-height: 1.2;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-style: italic;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    @keyframes ken-burns {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.05);
+        }
+    }
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<script>
+    function progressiveHeroBackground() {
+        const heroElement = document.querySelector(".hero");
+        if (!heroElement) return;
+
+        const gradient = "linear-gradient(rgba(0, 0, 0, 0.4), transparent)";
+        const mediumQualityUrl =
+            "https://res.cloudinary.com/dhcjs6gks/image/upload/w_1200,q_auto/v1759538264/88617414_vlboe8.jpg";
+        const highQualityUrl =
+            "https://res.cloudinary.com/dhcjs6gks/image/upload/q_auto/v1759538264/88617414_vlboe8.jpg";
+
+        const mediumImage = new Image();
+        mediumImage.src = mediumQualityUrl;
+        mediumImage.onload = () => {
+            heroElement.style.setProperty(
+                "--hero-bg-image",
+                `url(${mediumQualityUrl})`,
+            );
+            const highImage = new Image();
+            highImage.src = highQualityUrl;
+            highImage.onload = () => {
+                heroElement.style.setProperty(
+                    "--hero-bg-image",
+                    `url(${highQualityUrl})`,
+                );
+            };
+        };
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        progressiveHeroBackground();
+    });
+</script>

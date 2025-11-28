@@ -1,0 +1,138 @@
+---
+interface Photo {
+    small: string;
+    medium: string;
+    large: string;
+    alt: string;
+    tags: string[];
+}
+
+interface Props {
+    photos: Photo[];
+}
+
+const { photos } = Astro.props;
+---
+
+<script define:vars={{ allPhotos: photos }}>
+    document.addEventListener("DOMContentLoaded", () => {
+        const SCROLL_SPEED = 1;
+        const SCROLL_INTERVAL_MS = 20;
+        const MANUAL_SCROLL_STEP = 200;
+        const RESTART_DELAY_MS = 3000;
+
+        let scrollInterval;
+        const todosChip = document.getElementById("chip-todos");
+        const carouselTrack = document.getElementById("carousel-track");
+        const filterList = document.getElementById("filter-list");
+        const scrollLeftBtn = document.getElementById("scroll-left");
+        const scrollRightBtn = document.getElementById("scroll-right");
+
+        function startCarouselScroll() {
+            stopCarouselScroll();
+            let isPaused = false;
+
+            const scroll = () => {
+                if (isPaused) return;
+                carouselTrack.scrollLeft += SCROLL_SPEED;
+                if (
+                    carouselTrack.scrollLeft >=
+                    carouselTrack.scrollWidth - carouselTrack.clientWidth
+                ) {
+                    carouselTrack.scrollLeft = 0;
+                }
+            };
+
+            scrollInterval = setInterval(scroll, SCROLL_INTERVAL_MS);
+            carouselTrack.onmouseenter = () => (isPaused = true);
+            carouselTrack.onmouseleave = () => (isPaused = false);
+        }
+
+        function stopCarouselScroll() {
+            clearInterval(scrollInterval);
+        }
+
+        function scrollCarousel(direction) {
+            stopCarouselScroll();
+            carouselTrack.scrollBy({
+                left:
+                    direction === "left"
+                        ? -MANUAL_SCROLL_STEP
+                        : MANUAL_SCROLL_STEP,
+                behavior: "smooth",
+            });
+            setTimeout(startCarouselScroll, RESTART_DELAY_MS);
+        }
+
+        function setActiveChip(clickedChip) {
+            const isTodosChipClicked = clickedChip.id === "chip-todos";
+
+            stopCarouselScroll();
+
+            const allTagChips = filterList.querySelectorAll(
+                ".tag-item-container",
+            );
+            allTagChips.forEach((chip) => {
+                chip.classList.remove("active-container");
+            });
+
+            todosChip.classList.toggle("is-visible", !isTodosChipClicked);
+            todosChip.classList.toggle("active", isTodosChipClicked);
+            clickedChip.classList.toggle(
+                "active-container",
+                !isTodosChipClicked,
+            );
+
+            const tag = clickedChip.dataset.tag;
+
+            // Call the global renderGallery function from PhotoGallery component
+            if (window.renderGallery) {
+                window.renderGallery(tag);
+            }
+
+            setTimeout(startCarouselScroll, RESTART_DELAY_MS);
+        }
+
+        function generateFilterChips() {
+            const tagsCount = {};
+            allPhotos.forEach((photo) => {
+                photo.tags.forEach((tag) => {
+                    tagsCount[tag] = (tagsCount[tag] || 0) + 1;
+                });
+            });
+
+            const sortedTags = Object.keys(tagsCount).sort();
+
+            sortedTags.forEach((tag) => {
+                const count = tagsCount[tag];
+                const representativePhoto = allPhotos.find((p) =>
+                    p.tags.includes(tag),
+                );
+                const imageUrl = representativePhoto
+                    ? representativePhoto.small
+                    : "";
+
+                const li = document.createElement("li");
+                li.className = "tag-item-container";
+                li.dataset.tag = tag;
+                li.innerHTML = `<img src="${imageUrl}" alt="Icono para la etiqueta ${tag}" class="tag-image"><span class="tag-label">${tag} (${count})</span>`;
+                filterList.appendChild(li);
+            });
+
+            const allChips = [
+                todosChip,
+                ...filterList.querySelectorAll(".tag-item-container"),
+            ];
+            allChips.forEach((chip) => {
+                if (chip.dataset.tag === "all") chip.classList.add("active");
+                chip.addEventListener("click", () => setActiveChip(chip));
+            });
+        }
+
+        scrollLeftBtn.addEventListener("click", () => scrollCarousel("left"));
+        scrollRightBtn.addEventListener("click", () => scrollCarousel("right"));
+
+        generateFilterChips();
+        startCarouselScroll();
+    });
+</script>

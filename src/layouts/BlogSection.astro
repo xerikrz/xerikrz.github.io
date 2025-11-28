@@ -1,0 +1,169 @@
+---
+import { useTranslations } from "../i18n/utils.ts";
+import { languagesList, defaultLang } from "../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+import BlogAnimation from "../scripts/BlogAnimation.astro";
+---
+
+<section id="blog" aria-labelledby="blog-title">
+    <div class="container">
+        <h2 id="blog-title" class="section-title">{t("blog.section.title")}</h2>
+        <p class="section-subtitle">{t("blog.section.subtitle")}</p>
+        <div class="blog-split-view">
+            <div id="notes-container" class="blog-slider"></div>
+            <div id="code-container" class="blog-slider"></div>
+        </div>
+        <div class="blog-cta-container">
+            <a href={`/${currentLocale}/blog`} class="btn"
+                >{t("blog.button.text")}</a
+            >
+        </div>
+    </div>
+</section>
+
+<BlogAnimation lang={currentLocale} />
+
+<style is:global>
+    /*
+======================================================
+  BLOG (WIP)
+======================================================
+*/
+    .blog-split-view {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 2rem auto;
+    }
+
+    .blog-slider {
+        position: relative;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    .note-panel,
+    .code-panel {
+        position: relative;
+        height: 450px;
+    }
+
+    .note-panel.entering,
+    .code-panel.entering {
+        animation: slide-in-from-bottom 0.8s cubic-bezier(0.25, 1, 0.5, 1)
+            forwards;
+    }
+
+    .note-panel.exiting,
+    .code-panel.exiting {
+        animation: slide-out-to-top 0.8s cubic-bezier(0.5, 0, 0.75, 0) forwards;
+    }
+
+    .blog-window-header {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        background: var(--color-gray-300);
+        border-bottom: 1px solid var(--color-gray-300);
+        flex-shrink: 0;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .note-panel {
+        color: var(--color-light);
+        font-family: var(--font-body);
+        background: var(--color-gray-100);
+        border-radius: 15px;
+        box-shadow: var(--shadow-subtle);
+        border: var(--border-glass);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .code-panel {
+        background: var(--color-gray-100);
+        border-radius: 15px;
+        box-shadow: var(--shadow-subtle);
+        border: var(--border-glass);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .note-body {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        white-space: pre-wrap;
+        padding: 1.5rem;
+        overflow-y: auto;
+        flex-grow: 1;
+    }
+    .controls {
+        display: flex;
+        gap: 0.5rem;
+    }
+    .control {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+    .control.close {
+        background-color: #ff5f56;
+    }
+    .control.min {
+        background-color: #ffbd2e;
+    }
+    .control.max {
+        background-color: #27c93f;
+    }
+
+    .editor-title {
+        color: var(--color-light);
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+        margin: 0 auto;
+        transform: translateX(-18px);
+    }
+
+    .code-editor-body {
+        padding: 1.5rem;
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 0.9rem;
+        color: var(--color-light);
+        white-space: pre-wrap;
+        overflow: hidden;
+        flex-grow: 1;
+    }
+
+    .blog-cta-container {
+        text-align: center;
+        margin: 3rem;
+    }
+
+    .code-editor-body code::after {
+        content: "▋";
+        animation: blink 1s step-end infinite;
+        color: var(--color-primary-light);
+    }
+
+    @media (min-width: 768px) {
+        .blog-split-view {
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .blog-slider {
+            height: 450px;
+        }
+
+        .note-panel,
+        .code-panel {
+            height: 100%;
+        }
+    }
+</style>

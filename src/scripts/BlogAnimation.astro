@@ -1,0 +1,128 @@
+---
+import animationData from "@data/blog.json";
+
+const currentLocale = Astro.currentLocale || "en";
+const { lang = currentLocale } = Astro.props;
+
+const slides = animationData[lang] ?? animationData["en"];
+---
+
+<script define:vars={{ slides }}>
+    document.addEventListener("DOMContentLoaded", () => {
+        const notesContainer = document.getElementById("notes-container");
+        const codeContainer = document.getElementById("code-container");
+
+        if (!notesContainer || !codeContainer) return;
+
+        let currentSlideIndex = 0;
+        let typingTimeout;
+        let slideTimeout;
+
+        function typeEffect(element, text, speed, onComplete) {
+            let i = 0;
+            element.innerHTML = "";
+            element.textContent = "";
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                } else if (onComplete) {
+                    onComplete();
+                }
+                typingTimeout = setTimeout(type, speed);
+            }
+            type();
+        }
+
+        function createWindowHeader(titleText) {
+            const header = document.createElement("div");
+            header.className = "blog-window-header";
+
+            const controlsDiv = document.createElement("div");
+            controlsDiv.className = "controls";
+
+            const controlClasses = ["close", "min", "max"];
+            controlClasses.forEach((c) => {
+                const span = document.createElement("span");
+                span.className = `control ${c}`;
+                controlsDiv.appendChild(span);
+            });
+
+            const titleDiv = document.createElement("div");
+            titleDiv.className = "editor-title";
+            titleDiv.textContent = titleText;
+
+            header.append(controlsDiv, titleDiv);
+            return header;
+        }
+
+        function createNotePanel(slideData) {
+            const notePanel = document.createElement("div");
+            notePanel.className = "note-panel";
+            const noteHeader = createWindowHeader(
+                `notas/${slideData.lang.toLowerCase()}.md`,
+            );
+            const noteBody = document.createElement("div");
+            noteBody.className = "note-body";
+            noteBody.textContent = slideData.note;
+            notePanel.append(noteHeader, noteBody);
+            return notePanel;
+        }
+
+        function createCodePanel(slideData) {
+            const codePanel = document.createElement("div");
+            codePanel.className = "code-panel";
+            const extension = slideData.langExtension || "txt";
+            const codeHeader = createWindowHeader(`main.${extension}`);
+            const pre = document.createElement("pre");
+            pre.className = "code-editor-body";
+            const codeElement = document.createElement("code");
+            pre.appendChild(codeElement);
+            codePanel.append(codeHeader, pre);
+
+            typeEffect(codeElement, slideData.code, 25);
+
+            return codePanel;
+        }
+
+        function showNextSlide() {
+            if (document.hidden) {
+                slideTimeout = setTimeout(showNextSlide, 15000);
+                return;
+            }
+
+            clearTimeout(typingTimeout);
+            const oldPanels = document.querySelectorAll(
+                ".note-panel, .code-panel",
+            );
+            oldPanels.forEach((panel) => {
+                panel.classList.add("exiting");
+                panel.addEventListener("animationend", () => panel.remove(), {
+                    once: true,
+                });
+            });
+
+            const slideData = slides[currentSlideIndex];
+
+            const notePanel = createNotePanel(slideData);
+            const codePanel = createCodePanel(slideData);
+
+            notePanel.classList.add("entering");
+            codePanel.classList.add("entering");
+
+            notesContainer.appendChild(notePanel);
+            codeContainer.appendChild(codePanel);
+
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+            slideTimeout = setTimeout(showNextSlide, 10000);
+        }
+
+        showNextSlide();
+
+        document.addEventListener("astro:before-swap", () => {
+            clearTimeout(typingTimeout);
+            clearTimeout(slideTimeout);
+        });
+    });
+</script>

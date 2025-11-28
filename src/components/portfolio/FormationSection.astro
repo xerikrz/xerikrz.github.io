@@ -1,0 +1,325 @@
+---
+import { useTranslations } from "../../i18n/utils.ts";
+import { languagesList, defaultLang } from "../../i18n/ui.ts";
+
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+import SchoolIcon from "../icons/School.astro";
+import CertificateIcon from "../icons/Certificate.astro";
+import CourseIcon from "../icons/Course.astro";
+
+interface Degree {
+    title: string;
+    institution: string;
+    year: string;
+    description: string;
+}
+
+interface Certification {
+    title: string;
+    institution: string;
+    year: string;
+    url: string;
+}
+
+interface Course {
+    title: string;
+    platform: string;
+    year: string;
+}
+
+interface Props {
+    degrees: Degree[];
+    certifications: Certification[];
+    courses: Course[];
+}
+
+const {
+    degrees = [
+        {
+            title: "Bachelor in Computer Engineering",
+            institution: "Institute of Technology and Higher Studies",
+            year: "2018 - 2022",
+            description:
+                "Focused on software development and data analysis, with an emphasis on machine learning concepts.",
+        },
+        {
+            title: "Master’s in Data Science",
+            institution: "National University",
+            year: "2023 - Present",
+            description:
+                "Advanced studies in applied AI, statistics, and data visualization techniques.",
+        },
+    ],
+    certifications = [
+        {
+            title: "Data Analyst Certification",
+            institution: "Online Learning Platform",
+            year: "2023",
+            url: "https://example.com",
+        },
+        {
+            title: "UX Design Certification",
+            institution: "Online Learning Platform",
+            year: "2022",
+            url: "https://example.com",
+        },
+    ],
+    courses = [
+        {
+            title: "Advanced SQL Techniques",
+            platform: "Online Platform",
+            year: "2023",
+        },
+        {
+            title: "Modern Frontend Frameworks",
+            platform: "Online Platform",
+            year: "2023",
+        },
+        {
+            title: "Design Fundamentals",
+            platform: "Online Platform",
+            year: "2022",
+        },
+        {
+            title: "Introduction to Artificial Intelligence",
+            platform: "Online Platform",
+            year: "2024",
+        },
+    ],
+} = Astro.props as Props;
+---
+
+<section id="education">
+    <div class="container">
+        <h2 class="section-title">{t("formation.section.title")}</h2>
+        <p class="section-subtitle">{t("formation.section.subtitle")}</p>
+
+        {
+            degrees && degrees.length > 0 && (
+                <>
+                    <h3>{t("formation.degrees.title")}</h3>
+                    <div class="grid-scroll">
+                        {degrees.map((deg) => (
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-icon">
+                                        <SchoolIcon />
+                                    </div>
+                                    <div>
+                                        <h4>{deg.title}</h4>
+                                        <p>{deg.institution}</p>
+                                        <small>{deg.year}</small>
+                                    </div>
+                                </div>
+                                <p class="desc">{deg.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </>
+            )
+        }
+
+        {
+            certifications && certifications.length > 0 && (
+                <>
+                    <h3>{t("formation.certifications.title")}</h3>
+                    <div class="grid-scroll">
+                        {certifications.map((cert) => (
+                            <a
+                                href={cert.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="card"
+                            >
+                                <div class="card-header">
+                                    <div class="card-icon">
+                                        <CertificateIcon />
+                                    </div>
+                                    <div>
+                                        <h4>{cert.title}</h4>
+                                        <p>{cert.institution}</p>
+                                        <small>{cert.year}</small>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </>
+            )
+        }
+
+        {
+            courses && courses.length > 0 && (
+                <>
+                    <h3>{t("formation.courses.title")}</h3>
+                    <div class="grid-scroll">
+                        {courses.map((course) => (
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-icon">
+                                        <CourseIcon />
+                                    </div>
+                                    <div>
+                                        <h5>{course.title}</h5>
+                                        <p>{course.platform}</p>
+                                        <small>{course.year}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </>
+            )
+        }
+    </div>
+</section>
+
+<style>
+    #education {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 1.8rem;
+        color: var(--color-primary-light);
+        margin-bottom: 0.25rem;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        color: var(--color-gray-500);
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    h3 {
+        color: var(--color-primary-light);
+        font-size: 1.25rem;
+        margin: 2.5rem 0 1rem;
+        text-align: center;
+    }
+
+    .grid-scroll {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 85%;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        justify-content: start;
+        padding: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .grid-scroll:not(:has(.card:last-child:not(:first-child))) {
+        justify-content: center;
+    }
+
+    .grid-scroll::-webkit-scrollbar {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
+
+    .grid-scroll::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 255, 102, 0.4),
+            rgba(0, 255, 200, 0.6)
+        );
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0, 255, 102, 0.3);
+    }
+
+    .grid-scroll::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 255, 102, 0.9),
+            rgba(0, 255, 200, 1)
+        );
+    }
+
+    .grid-scroll {
+        scrollbar-color: rgba(0, 255, 102, 0.4) rgba(255, 255, 255, 0.05);
+        scrollbar-width: thin;
+    }
+
+    .card {
+        background: rgba(26, 26, 26, 0.5);
+        border-radius: 12px;
+        border: var(--border-glass);
+        padding: 1.25rem 1.5rem;
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-glass);
+        transition: all 0.3s ease;
+        scroll-snap-align: start;
+    }
+
+    .card-icon svg {
+        width: 28px;
+        height: 28px;
+        color: var(--color-primary);
+        flex-shrink: 0;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 25px rgba(0, 255, 102, 0.2);
+    }
+
+    .card-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .card h4,
+    .card h5 {
+        color: var(--color-primary-light);
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .card p {
+        color: var(--color-gray-500);
+        font-size: 0.9rem;
+        margin: 0.25rem 0;
+    }
+
+    .card small {
+        color: var(--color-gray-600);
+        font-size: 0.8rem;
+    }
+
+    .desc {
+        margin-top: 0.75rem;
+        color: var(--color-gray-400);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    @media (min-width: 768px) {
+        .grid-scroll {
+            grid-auto-columns: 45%;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .grid-scroll {
+            grid-auto-columns: 30%;
+            padding-inline: max(1rem, (100% - (30% * 3 + 2rem)) / 2);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+        }
+    }
+</style>

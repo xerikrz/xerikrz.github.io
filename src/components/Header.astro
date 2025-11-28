@@ -1,0 +1,288 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { useTranslations } from "../i18n/utils.ts";
+import { languagesList, defaultLang } from "../i18n/ui.ts";
+const currentLocale = Astro.currentLocale || defaultLang;
+const t = useTranslations(currentLocale as keyof typeof languagesList);
+
+import HomeIcon from "./icons/Home.astro";
+import AboutIcon from "./icons/About.astro";
+import ProjectsIcon from "./icons/Projects.astro";
+import BlogIcon from "./icons/Blog.astro";
+import ContactIcon from "./icons/Contact.astro";
+
+const { fullname = "Your Name" } = Astro.props;
+---
+
+<header id="main-header">
+    <div class="container">
+        <div id="logo">
+            <a href={getRelativeLocaleUrl(currentLocale, "/")}
+                ><h1>{fullname}</h1></a
+            >
+        </div>
+        <nav id="main-nav" role="navigation">
+            <ul>
+                <li>
+                    <a
+                        href={getRelativeLocaleUrl(currentLocale, "/")}
+                        class="nav-item"
+                    >
+                        <HomeIcon>
+                            <title>{t("nav.home")}</title>
+                        </HomeIcon>
+                        <span>{t("nav.home")}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href={`/${currentLocale}/#about`} class="nav-item">
+                        <AboutIcon>
+                            <title>{t("nav.about")}</title>
+                        </AboutIcon>
+                        <span>{t("nav.about")}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href={`/${currentLocale}/#projects`} class="nav-item">
+                        <ProjectsIcon>
+                            <title>{t("nav.projects")}</title>
+                        </ProjectsIcon>
+                        <span>{t("nav.projects")}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href={`/${currentLocale}/#blog`} class="nav-item">
+                        <BlogIcon>
+                            <title>{t("nav.blog")}</title>
+                        </BlogIcon>
+                        <span>{t("nav.blog")}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href={`/${currentLocale}/#contact`} class="nav-item">
+                        <ContactIcon>
+                            <title>{t("nav.contact")}</title>
+                        </ContactIcon>
+                        <span>{t("nav.contact")}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style is:global>
+    #main-header {
+        /* Estilo de píldora flotante */
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 2rem);
+        max-width: 350px; /* Evita que sea demasiado ancha en pantallas intermedias */
+        height: 60px;
+        border-radius: 999px;
+
+        /* Efecto Glassmorphism */
+        background: rgba(28, 28, 28, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--color-primary-alpha);
+
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+
+    #main-header .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #main-nav {
+        width: 100%;
+        height: 100%;
+    }
+
+    #main-nav ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #main-nav ul li {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: var(--color-primary);
+        font-size: 0.65rem;
+        font-weight: 500;
+        gap: 0.1rem;
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
+
+    .nav-item:hover {
+        color: var(--color-primary-light);
+    }
+
+    .nav-item svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        min-width: 2.2rem;
+        min-height: 2.2rem;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item:hover svg {
+        transform: scale(1.1);
+    }
+
+    .nav-item span {
+        display: block;
+        color: var(--color-primary);
+        transition: color 0.3s ease;
+    }
+
+    .nav-item:hover span {
+        color: var(--color-primary-light);
+    }
+
+    /* Variable para el borde con transparencia */
+    :root {
+        --color-primary-alpha: rgba(0, 255, 102, 0.2);
+    }
+
+    @media (min-width: 768px) {
+        /* Restaurar estilos de la barra de navegación para escritorio */
+        #main-header {
+            all: initial; /* Resetea los estilos de la píldora móvil */
+            position: fixed;
+            top: 0;
+            bottom: auto;
+            left: 0;
+            width: 100%;
+            max-width: none;
+            height: 70px;
+            padding: 0 2rem;
+            border-radius: 0;
+            border-bottom: 2px solid transparent;
+            border-image: var(--gradient-primary);
+            border-image-slice: 1;
+            background: rgba(19, 19, 19, 0.4);
+            backdrop-filter: blur(10px); /* Mantenemos el efecto glass */
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        #logo {
+            display: block;
+        }
+
+        #logo a {
+            color: var(--color-primary-light);
+            text-shadow: 0 0 8px var(--color-primary-light);
+            text-decoration: none;
+        }
+
+        #logo h1 {
+            font-size: 1.5rem;
+            font-family: var(--font-primary);
+            white-space: nowrap;
+            background: linear-gradient(
+                110deg,
+                var(--color-primary) 30%,
+                var(--color-white) 50%,
+                var(--color-primary) 70%
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            animation: metallic-sheen 6s linear infinite;
+        }
+
+        #main-nav ul {
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        #main-nav ul li {
+            width: auto;
+            height: auto;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+            flex-direction: row;
+            font-size: 1rem;
+            font-family: var(--font-ui);
+            color: var(--color-light);
+            padding-bottom: 5px;
+            bottom: auto;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .nav-item:hover {
+            color: var(--color-primary-light);
+            text-shadow: 0 0 8px var(--color-primary-light);
+        }
+
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+
+        .nav-item svg {
+            display: none;
+        }
+
+        .nav-item span {
+            display: block;
+        }
+
+        .nav-item:hover span {
+            font-size: inherit;
+        }
+    }
+</style>

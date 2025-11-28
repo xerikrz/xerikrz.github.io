@@ -1,0 +1,173 @@
+---
+const particles = Array.from({ length: 45 }, (_, i) => {
+    const size = 1 + Math.random() * 4;
+    const left = Math.random() * 100;
+    const duration = 5 + Math.random() * 10;
+    const delay = Math.random() * 5;
+
+    return {
+        id: i,
+        left,
+        duration,
+        delay,
+        size,
+    };
+});
+---
+
+<div id="particles">
+    <div id="particles-container" class="rotation-container">
+        {
+            particles.map((p) => (
+                <div
+                    class="particle"
+                    style={{
+                        "--base-size": `${p.size}px`,
+                        left: `${p.left}%`,
+                        animationDuration: `${p.duration}s`,
+                        animationDelay: `${p.delay}s`,
+                    }}
+                />
+            ))
+        }
+    </div>
+    <div id="gradient-overlay" class="rotation-container"></div>
+</div>
+
+<style>
+    #particles-container {
+        position: fixed;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        overflow: hidden;
+        z-index: -99;
+        transform: rotate(205deg);
+        transition: transform 15s linear;
+        background-color: var(--color-secondary);
+    }
+
+    #gradient-overlay {
+        position: fixed;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        overflow: hidden;
+        z-index: -95;
+        transform: rotate(205deg);
+        transition: transform 15s linear;
+        box-shadow: inset 0 0 15% 5% var(--color-secondary);
+    }
+
+    .particle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+        animation: float 25s infinite linear;
+        filter: blur(0.5px);
+        background-color: var(--color-primary);
+        z-index: -97;
+        box-shadow:
+            0 0 10px 2px rgba(var(--color-primary-rgb), 0.4),
+            0 0 20px 4px rgba(var(--color-primary-light-rgb), 0.25);
+        box-shadow:
+            0 0 calc(var(--base-size) * 2) calc(var(--base-size) * 0.5)
+                color-mix(in srgb, var(--color-primary) 40%, transparent),
+            0 0 calc(var(--base-size) * 3) calc(var(--base-size) * 1)
+                color-mix(in srgb, var(--color-primary-light) 25%, transparent);
+        width: var(--base-size);
+        height: var(--base-size);
+    }
+
+    .particle::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 600%;
+        top: 100%;
+        left: 0;
+        z-index: -98;
+        background: linear-gradient(
+            to bottom,
+            var(--color-primary) 0%,
+            rgba(var(--color-primary-rgb), 0) 75%
+        );
+        background: linear-gradient(
+            to bottom,
+            color-mix(in srgb, var(--color-primary) 100%, transparent 0%) 0%,
+            color-mix(in srgb, var(--color-primary) 0%, transparent 100%) 75%
+        );
+        border-radius: 50%;
+        filter: blur(3px);
+        opacity: 0.9;
+        transform: scaleY(1.5);
+        animation: flicker-tail 0.5s infinite ease-in-out;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(150vh) scale(1);
+            opacity: 0;
+        }
+        10%,
+        90% {
+            opacity: 0.5;
+        }
+        100% {
+            transform: translateY(-50vh) scale(1);
+            opacity: 0;
+        }
+    }
+
+    @keyframes flicker-tail {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0.4;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        75% {
+            opacity: 0.3;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .particle {
+            width: calc(var(--base-size) + 1px);
+            height: calc(var(--base-size) + 1px);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .particle {
+            width: calc(var(--base-size) + 2px);
+            height: calc(var(--base-size) + 2px);
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const rotationContainers = document.querySelectorAll(
+            ".rotation-container",
+        );
+
+        if (rotationContainers.length > 0) {
+            const rotationInterval = 15000;
+
+            const setRandomRotation = () => {
+                const randomAngle = Math.floor(Math.random() * 360);
+                rotationContainers.forEach((container) => {
+                    container.style.transform = `rotate(${randomAngle}deg)`;
+                });
+            };
+            setInterval(setRandomRotation, rotationInterval);
+        }
+    });
+</script>

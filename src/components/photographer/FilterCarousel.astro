@@ -1,0 +1,264 @@
+---
+interface Props {
+    sectionTitle: string;
+    buttonText: string;
+}
+
+const { sectionTitle, buttonText } = Astro.props;
+---
+
+<section id="gallery-presentation" class="gallery-presentation">
+    <div class="gallery-presentation-container">
+        <h2 class="section-title">{sectionTitle}</h2>
+        <div class="filters-wrapper">
+            <div class="carousel-container">
+                <button id="scroll-left" class="carousel-arrow">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m15 18-6-6 6-6"></path>
+                    </svg>
+                </button>
+                <div class="carousel-track-wrapper">
+                    <div id="carousel-track">
+                        <ul id="filter-list"></ul>
+                    </div>
+                </div>
+                <button id="scroll-right" class="carousel-arrow">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                </button>
+            </div>
+            <button id="chip-todos" data-tag="all" class="btn"
+                >{buttonText}</button
+            >
+        </div>
+    </div>
+</section>
+
+<style>
+    .gallery-presentation {
+        padding: 1rem;
+    }
+    .gallery-presentation-container {
+        max-width: 72rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-title {
+        padding: 1rem;
+    }
+    .filters-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-track-wrapper {
+        flex: 1 1 0%;
+        width: 100%;
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent
+        );
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent
+        );
+    }
+    .carousel-container {
+        position: relative;
+        flex: 1 1 0%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .carousel-arrow {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        padding: 0.75rem;
+        background-color: rgba(38, 38, 38, 0.8);
+        border-radius: 9999px;
+        color: var(--color-primary);
+        transition: all 0.2s ease-in-out;
+        border: none;
+        cursor: pointer;
+        display: none;
+    }
+    .carousel-arrow:hover {
+        background-color: #404040;
+        color: var(--color-primary-light);
+    }
+    .carousel-arrow svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    #scroll-left {
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    #scroll-right {
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+    #chip-todos {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition:
+            max-height 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            padding 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            margin-top 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    #chip-todos.is-visible {
+        opacity: 1;
+        max-height: 5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 1.5rem;
+        pointer-events: auto;
+    }
+    #carousel-track {
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        min-height: 10rem;
+        width: 100%;
+    }
+    #filter-list {
+        display: flex;
+        gap: 2.5rem;
+        white-space: nowrap;
+        list-style: none;
+        padding: 3rem 0;
+        margin: 0;
+    }
+    #carousel-track::-webkit-scrollbar {
+        display: none;
+    }
+    #carousel-track {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    @media (min-width: 768px) {
+        .gallery-presentation {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .carousel-arrow {
+            display: block;
+        }
+    }
+    @media (min-width: 1024px) {
+        .gallery-presentation {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+</style>
+
+<style is:global>
+    .tag-item-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        cursor: pointer;
+        width: 8rem;
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        gap: 0.75rem;
+    }
+    .tag-image {
+        width: 6rem;
+        height: 6rem;
+        object-fit: cover;
+        flex-shrink: 0;
+        /* Modern Squircle Shape */
+        border-radius: 1.5rem;
+        transition: all 0.3s ease;
+        /* Soft shadow instead of border */
+        box-shadow:
+            0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border: 2px solid transparent;
+    }
+    .tag-item-container:hover .tag-image {
+        transform: translateY(-3px);
+        box-shadow:
+            0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    .tag-item-container.active-container .tag-image {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.2);
+    }
+    .tag-label {
+        font-family: var(--font-ui);
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin: 0;
+        padding: 0.35rem 1rem;
+        line-height: 1;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        color: var(--color-gray-600);
+        background-color: transparent;
+        border: 1px solid transparent;
+    }
+    .tag-item-container:hover .tag-label {
+        color: var(--color-primary);
+    }
+    .tag-label.active {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        box-shadow: 0 4px 6px -1px rgba(var(--color-primary-rgb), 0.3);
+    }
+    .tag-item-container:hover {
+        transform: scale(1.02);
+    }
+    .tag-item-container.active-container {
+        transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+        .tag-item-container {
+            width: 9rem;
+        }
+
+        .tag-image {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 1.75rem;
+        }
+    }
+</style>
